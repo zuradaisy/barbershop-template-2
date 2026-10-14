@@ -334,7 +334,7 @@ export const designSystem = {
   forms: {
     title: "Form",
     description:
-      "Input selalu dibungkus Field agar label, hint, error, dan aria-describedby ditangani otomatis.",
+      "Input selalu dibungkus Field agar label, hint, error, dan aria-describedby ditangani otomatis. Input, Select, dan Textarea memakai warna background supaya kontras di atas panel muted.",
     name: {
       label: "Nama lengkap",
       placeholder: "Contoh: Siti Rahma",

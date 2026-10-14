@@ -51,8 +51,3 @@ export const teamMembers: Barber[] = [
     photo: "/images/team-arief.jpg",
   },
 ];
-
-export const teamUi = {
-  scheduleLabel: "Jadwal",
-  bookingLabel: "Booking",
-};

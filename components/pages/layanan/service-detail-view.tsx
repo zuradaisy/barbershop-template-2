@@ -7,6 +7,7 @@ import {
   LuCheck,
   LuClock,
   LuShieldCheck,
+  LuUserRoundCheck,
 } from "react-icons/lu";
 import { buttonStyles } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -76,7 +77,7 @@ export function ServiceDetailView({ service }: { service: Service }) {
               <h2 className="text-xl font-bold uppercase">
                 {serviceUi.aboutTitle}
               </h2>
-              <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
+              <p className="text-base leading-relaxed text-muted-foreground">
                 {service.fullDescription}
               </p>
             </div>
@@ -89,7 +90,7 @@ export function ServiceDetailView({ service }: { service: Service }) {
                   {service.steps.map((step, index) => (
                     <li
                       key={step}
-                      className="flex items-start gap-3 border-b border-border py-3 text-sm"
+                      className="flex items-start gap-3 border-b border-border py-3 text-base"
                     >
                       <span className="font-bold text-accent">
                         {String(index + 1).padStart(2, "0")}
@@ -109,7 +110,7 @@ export function ServiceDetailView({ service }: { service: Service }) {
                   {service.benefits.map((benefit) => (
                     <li
                       key={benefit}
-                      className="flex items-start gap-2.5 text-sm text-muted-foreground"
+                      className="flex items-start gap-2.5 text-base text-muted-foreground"
                     >
                       <LuCheck
                         aria-hidden="true"
@@ -133,7 +134,7 @@ export function ServiceDetailView({ service }: { service: Service }) {
                   <h2 className="mt-1 text-xl font-bold uppercase">
                     {serviceUi.reservationTitle}
                   </h2>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  <p className="mt-2 text-base leading-relaxed text-muted-foreground">
                     {serviceUi.reservationDescription}
                   </p>
                 </div>
@@ -182,7 +183,28 @@ export function ServiceDetailView({ service }: { service: Service }) {
                   </a>
                 </div>
               </Card>
-              <p className="flex items-start gap-2 px-1 text-xs leading-relaxed text-muted-foreground">
+              <ul className="space-y-3 px-1">
+                {serviceUi.bookingAssurances.map((assurance) => {
+                  const Icon =
+                    assurance.icon === "hygiene"
+                      ? LuShieldCheck
+                      : LuUserRoundCheck;
+
+                  return (
+                    <li
+                      key={assurance.icon}
+                      className="flex items-start gap-3 text-base leading-relaxed text-muted-foreground"
+                    >
+                      <Icon
+                        aria-hidden="true"
+                        className="mt-0.5 size-4 shrink-0 text-foreground"
+                      />
+                      <span>{assurance.text}</span>
+                    </li>
+                  );
+                })}
+              </ul>
+              <p className="flex items-start gap-2 px-1 text-sm leading-relaxed text-muted-foreground">
                 <LuShieldCheck
                   aria-hidden="true"
                   className="mt-0.5 size-4 shrink-0"

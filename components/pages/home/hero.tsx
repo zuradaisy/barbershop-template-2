@@ -32,7 +32,7 @@ export function HomeHero() {
           <h1 className="max-w-5xl font-display text-4xl leading-[0.98] font-bold tracking-tight whitespace-pre-line uppercase sm:text-6xl lg:col-span-8 lg:text-7xl xl:text-8xl">
             {hero.title}
           </h1>
-          <p className="max-w-md text-sm leading-relaxed text-hero-foreground/80 sm:text-base lg:col-span-3 lg:col-start-10 lg:pb-2">
+          <p className="max-w-md text-base leading-relaxed text-hero-foreground/80 lg:col-span-3 lg:col-start-10 lg:pb-2">
             {hero.description}
           </p>
         </div>

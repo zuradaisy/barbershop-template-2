@@ -59,17 +59,26 @@ export function QuickBookingForm() {
     >
       <Container>
         <Card className="p-5 sm:p-6">
-          <p className="text-sm leading-relaxed text-muted-foreground">
+          <p className="text-base leading-relaxed text-muted-foreground">
             {copy.descriptionFor(selectedService.name)}
           </p>
           <form
             onSubmit={handleSubmit}
-            className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-8"
+            className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2"
           >
+            <Field id={nameId} label={copy.nameLabel}>
+              <Input
+                id={nameId}
+                autoComplete="name"
+                value={name}
+                onChange={(event) => setName(event.target.value)}
+                required
+              />
+            </Field>
             <Field
               id={serviceId}
               label={copy.serviceLabel}
-              className="2xl:col-span-2"
+              className="sm:col-span-2"
             >
               <Select
                 id={serviceId}
@@ -82,15 +91,6 @@ export function QuickBookingForm() {
                   </option>
                 ))}
               </Select>
-            </Field>
-            <Field id={nameId} label={copy.nameLabel}>
-              <Input
-                id={nameId}
-                autoComplete="name"
-                value={name}
-                onChange={(event) => setName(event.target.value)}
-                required
-              />
             </Field>
             <Field id={phoneId} label={copy.phoneLabel}>
               <Input
@@ -122,7 +122,7 @@ export function QuickBookingForm() {
                 required
               />
             </Field>
-            <div className="self-end 2xl:col-span-2">
+            <div className="sm:col-span-2">
               <Button type="submit" size="md" className="w-full justify-center">
                 <FaWhatsapp aria-hidden="true" className="size-4" />
                 {copy.submitLabel}
@@ -131,12 +131,12 @@ export function QuickBookingForm() {
             {submitted ? (
               <p
                 role="status"
-                className="text-sm text-muted-foreground sm:col-span-2 lg:col-span-3 2xl:col-span-8"
+                className="text-sm text-muted-foreground sm:col-span-2"
               >
                 {copy.successMessage}
               </p>
             ) : null}
-            <p className="text-xs leading-relaxed text-muted-foreground sm:col-span-2 lg:col-span-3 2xl:col-span-8">
+            <p className="text-sm leading-relaxed text-muted-foreground sm:col-span-2">
               {copy.pendingNote}
             </p>
           </form>

@@ -24,9 +24,9 @@ export function FaqAccordion() {
               type="button"
               onClick={() => toggleItem(item.id)}
               aria-expanded={isOpen}
-              className="flex w-full items-center justify-between gap-4 p-4 text-left transition-colors hover:bg-muted/30 sm:p-5"
+              className="flex w-full items-center justify-between gap-4 p-5 text-left transition-colors hover:bg-muted/30 sm:p-6"
             >
-              <span className="font-sans text-xs font-bold text-foreground sm:text-sm">
+              <span className="font-sans text-base font-semibold text-foreground">
                 {item.question}
               </span>
               <LuChevronDown
@@ -37,8 +37,8 @@ export function FaqAccordion() {
               />
             </button>
             {isOpen && (
-              <div className="border-t border-border px-4 pt-3 pb-4 sm:px-5 sm:pb-5">
-                <p className="text-xs leading-relaxed text-muted-foreground sm:text-sm">
+              <div className="border-t border-border px-5 pt-4 pb-5 sm:px-6 sm:pb-6">
+                <p className="text-base leading-relaxed text-muted-foreground">
                   {item.answer}
                 </p>
               </div>

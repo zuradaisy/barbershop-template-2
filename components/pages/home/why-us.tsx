@@ -25,7 +25,7 @@ export function WhyUs() {
 
           <div className="flex flex-col justify-center gap-4">
             <SectionHeading kicker={whyUs.kicker} title={whyUs.title} />
-            <p className="max-w-prose text-sm leading-relaxed text-muted-foreground sm:text-base">
+            <p className="max-w-prose text-base leading-relaxed text-muted-foreground">
               {whyUs.description}
             </p>
           </div>
@@ -49,7 +49,7 @@ export function WhyUs() {
                       <h4 className="text-xs font-bold tracking-wide uppercase sm:text-sm">
                         {point.title}
                       </h4>
-                      <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                      <p className="mt-1 text-base leading-relaxed text-muted-foreground">
                         {point.description}
                       </p>
                     </div>

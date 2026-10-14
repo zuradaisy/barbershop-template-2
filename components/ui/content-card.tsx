@@ -89,7 +89,7 @@ export function ContentCard({
             </span>
           ) : null}
         </div>
-        <div className="mt-1 flex flex-col justify-between gap-1 text-sm text-muted-foreground sm:flex-row sm:items-start sm:gap-4">
+        <div className="mt-1 flex flex-col justify-between gap-1 text-base text-muted-foreground sm:flex-row sm:items-start sm:gap-4">
           {description ? <p className="max-w-2xl">{description}</p> : null}
           {meta ? <p className="shrink-0">{meta}</p> : null}
         </div>
@@ -105,7 +105,7 @@ export function ContentCard({
   return (
     <article
       className={cn(
-        "group/card flex h-full flex-col overflow-hidden rounded-sm border transition-colors duration-150",
+        "group/card relative flex h-full flex-col overflow-hidden rounded-sm border transition-colors duration-150",
         isCatalogCard
           ? "border-border bg-muted/40 hover:border-muted-foreground/40 hover:bg-background"
           : "border-transparent bg-background",
@@ -113,6 +113,13 @@ export function ContentCard({
         className,
       )}
     >
+      {href ? (
+        <Link
+          href={href}
+          aria-label={title}
+          className="absolute inset-0 z-0 rounded-sm focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none focus-visible:ring-inset"
+        />
+      ) : null}
       {image ? (
         <div
           className={cn(
@@ -155,10 +162,10 @@ export function ContentCard({
           </div>
         ) : null}
         <h3 className="text-base font-extrabold uppercase sm:text-lg">
-          {titleContent}
+          {title}
         </h3>
         {description ? (
-          <p className="text-sm leading-relaxed text-muted-foreground">
+          <p className="text-base leading-relaxed text-muted-foreground">
             {description}
           </p>
         ) : null}
@@ -183,7 +190,7 @@ export function ContentCard({
               variant: action.variant ?? "primary",
               size: "md",
               className:
-                "w-full bg-inverse text-inverse-foreground hover:bg-inverse/90",
+                "relative z-10 w-full bg-inverse text-inverse-foreground hover:bg-inverse/90",
             });
 
             return action.external ? (

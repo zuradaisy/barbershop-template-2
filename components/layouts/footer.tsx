@@ -21,7 +21,7 @@ export function Footer() {
                 {site.name}
               </span>
             </Link>
-            <p className="max-w-sm text-sm leading-relaxed text-inverse-foreground/70">
+            <p className="max-w-sm text-base leading-relaxed text-inverse-foreground/70">
               {site.description}
             </p>
             <div
@@ -157,7 +157,7 @@ export function Footer() {
                 {site.footer.weekdayHours} {contact.hours.weekday}
               </p>
               <div className="border-t border-inverse-foreground/15 pt-3">
-                <p className="text-xs leading-relaxed text-inverse-foreground/70">
+                <p className="text-sm leading-relaxed text-inverse-foreground/70">
                   {site.footer.walkInNote}
                 </p>
               </div>

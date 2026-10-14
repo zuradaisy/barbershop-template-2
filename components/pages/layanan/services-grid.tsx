@@ -7,7 +7,7 @@ import { Container } from "@/components/ui/container";
 import { Section } from "@/components/layouts/section";
 import { ContentCard } from "@/components/ui/content-card";
 import { serviceCategories, serviceUi, services } from "@/content/services";
-import { serviceHref } from "@/lib/links";
+import { bookingHref, serviceHref } from "@/lib/links";
 import { cn } from "@/lib/utils";
 
 export function ServicesGrid() {
@@ -73,8 +73,8 @@ export function ServicesGrid() {
               }
               actions={[
                 {
-                  label: serviceUi.detailAction,
-                  href: serviceHref(service.slug),
+                  label: serviceUi.formAction,
+                  href: bookingHref(service.slug),
                   variant: "primary",
                 },
               ]}

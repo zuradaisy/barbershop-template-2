@@ -1,7 +1,6 @@
 import { LuClock, LuExternalLink, LuMapPin, LuPhone } from "react-icons/lu";
 import { FaWhatsapp } from "react-icons/fa6";
 import { buttonStyles } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/layouts/section";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -36,12 +35,12 @@ export function FaqAndContact() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <Container>
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] lg:gap-12">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] lg:gap-16">
           <div>
             <SectionHeading
               kicker={faqAndContact.faqKicker}
               title={faqAndContact.faqTitle}
-              className="mb-6"
+              className="mb-8"
             />
             <FaqAccordion />
           </div>
@@ -49,17 +48,17 @@ export function FaqAndContact() {
             <SectionHeading
               kicker={faqAndContact.contactKicker}
               title={faqAndContact.contactTitle}
-              className="mb-6"
+              className="mb-8"
             />
             {hasContact ? (
-              <Card className="space-y-4">
+              <div className="space-y-6 py-1">
                 {contact.address.full ? (
                   <div className="flex items-start gap-3">
                     <LuMapPin
                       aria-hidden="true"
-                      className="mt-0.5 size-4.5 shrink-0 text-accent"
+                      className="mt-1 size-4 shrink-0 text-accent"
                     />
-                    <div className="text-sm">
+                    <div className="text-base">
                       <p className="font-bold">{faqAndContact.addressLabel}</p>
                       <p className="text-muted-foreground">
                         {contact.address.full}
@@ -71,9 +70,9 @@ export function FaqAndContact() {
                   <div className="flex items-start gap-3">
                     <LuClock
                       aria-hidden="true"
-                      className="mt-0.5 size-4.5 shrink-0 text-accent"
+                      className="mt-1 size-4 shrink-0 text-accent"
                     />
-                    <div className="text-sm">
+                    <div className="text-base">
                       <p className="font-bold">{faqAndContact.hoursLabel}</p>
                       <p className="text-muted-foreground">
                         {contact.hours.display}
@@ -85,9 +84,9 @@ export function FaqAndContact() {
                   <div className="flex items-start gap-3">
                     <LuPhone
                       aria-hidden="true"
-                      className="mt-0.5 size-4.5 shrink-0 text-accent"
+                      className="mt-1 size-4 shrink-0 text-accent"
                     />
-                    <div className="text-sm">
+                    <div className="text-base">
                       <p className="font-bold">{faqAndContact.phoneLabel}</p>
                       <a
                         href={phoneLink()}
@@ -98,10 +97,10 @@ export function FaqAndContact() {
                     </div>
                   </div>
                 ) : null}
-              </Card>
+              </div>
             ) : (
-              <Card className="space-y-4">
-                <p className="text-sm leading-relaxed text-muted-foreground">
+              <div className="space-y-5 py-1">
+                <p className="text-base leading-relaxed text-muted-foreground">
                   {faqAndContact.contactUnavailable}
                 </p>
                 <a
@@ -117,7 +116,7 @@ export function FaqAndContact() {
                   <FaWhatsapp aria-hidden="true" className="size-4" />
                   {faqAndContact.whatsappAction}
                 </a>
-              </Card>
+              </div>
             )}
             {contact.address.full && contact.googleMapsUrl ? (
               <>

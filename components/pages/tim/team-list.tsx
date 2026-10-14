@@ -1,8 +1,7 @@
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/layouts/section";
 import { ContentCard } from "@/components/ui/content-card";
-import { teamMembers, teamUi } from "@/content/team";
-import { bookingHref } from "@/lib/links";
+import { teamMembers } from "@/content/team";
 
 export function TeamList() {
   return (
@@ -15,7 +14,6 @@ export function TeamList() {
               variant="profile"
               aspect="portrait"
               title={barber.name}
-              href={bookingHref()}
               eyebrow={barber.role}
               description={barber.bio}
               image={{
@@ -24,7 +22,6 @@ export function TeamList() {
               }}
               tags={barber.specialization}
               meta={barber.experience}
-              actions={[{ label: teamUi.bookingLabel, href: bookingHref() }]}
             />
           ))}
         </div>
