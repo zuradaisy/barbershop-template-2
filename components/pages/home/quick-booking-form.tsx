@@ -79,8 +79,8 @@ export function QuickBookingForm() {
             id={phoneId}
             type="tel"
             autoComplete="tel"
-              pattern="[0-9+() -]{8,20}"
-              title="Masukkan nomor telepon dengan 8 sampai 20 karakter yang valid."
+            pattern="[0-9+() -]{8,20}"
+            title="Masukkan nomor telepon dengan 8 sampai 20 karakter yang valid."
             value={phone}
             onChange={(event) => setPhone(event.target.value)}
             required

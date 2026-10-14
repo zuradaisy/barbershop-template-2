@@ -78,7 +78,8 @@ export const site = {
       latitude: 0,
       longitude: 0,
     },
-    demoNotice: "Nomor, alamat, dan jam operasional ini data demo. Ganti dengan informasi bisnis yang benar sebelum situs dipublikasikan.",
+    demoNotice:
+      "Nomor, alamat, dan jam operasional ini data demo. Ganti dengan informasi bisnis yang benar sebelum situs dipublikasikan.",
   },
   socials: {
     instagram: {

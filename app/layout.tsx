@@ -43,11 +43,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html
-      lang="id"
-      suppressHydrationWarning
-      className="h-full antialiased"
-    >
+    <html lang="id" suppressHydrationWarning className="h-full antialiased">
       <body className="flex min-h-full flex-col bg-background text-foreground selection:bg-primary/20 selection:text-foreground">
         <ThemeScript />
         <SkipLink label={site.skipLinkLabel} />

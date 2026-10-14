@@ -23,8 +23,7 @@ export default function GalleryPage() {
         <Container>
           <GalleryGrid showFilters showTitles />
           <p className="mt-8 text-sm text-muted-foreground">
-            Toggle before/after tersedia untuk tiga foto pasangan yang
-            ditandai.
+            Toggle before/after tersedia untuk tiga foto pasangan yang ditandai.
           </p>
         </Container>
       </Section>
