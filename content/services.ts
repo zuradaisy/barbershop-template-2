@@ -264,6 +264,16 @@ export const serviceUi = {
   detailAction: "Lihat detail",
   whatsappAction: "Tanya Sekarang",
   formAction: "Booking",
+  bookingAssurances: [
+    {
+      icon: "hygiene",
+      text: "Peralatan higienis steril UV sebelum setiap sesi",
+    },
+    {
+      icon: "barber",
+      text: "Dikerjakan oleh kapster berpengalaman bersertifikat",
+    },
+  ],
   whatsappMessage: (service: Service) =>
     `Halo Mono Barber, saya ingin bertanya tentang ketersediaan jadwal untuk layanan ${service.name} (${service.price}, ${service.duration}).`,
 };
