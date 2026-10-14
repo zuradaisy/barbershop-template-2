@@ -7,37 +7,39 @@ export type FaqItem = {
 export const faqItems: FaqItem[] = [
   {
     id: "booking-mandatory",
-    question: "Bagaimana cara mengajukan booking?",
+    question:
+      "Apakah harus booking terlebih dahulu atau bisa langsung walk-in?",
     answer:
-      "Isi preferensi layanan dan jadwal pada formulir, lalu lanjutkan melalui WhatsApp. Booking baru terkonfirmasi setelah mendapat balasan dari barbershop.",
+      "Kami menerima walk-in jika kursi tersedia. Namun, untuk menghindari waktu tunggu, kami sangat menyarankan reservasi jadwal terlebih dahulu melalui form booking atau WhatsApp.",
   },
   {
     id: "cut-duration",
-    question: "Berapa lama durasi setiap layanan?",
-    answer: "Durasi tertera pada setiap layanan di halaman Layanan dan Harga.",
+    question: "Berapa lama durasi potong rambut rata-rata?",
+    answer:
+      "Rata-rata potong rambut memakan waktu sekitar 40 hingga 50 menit, mencakup sesi konsultasi bentuk wajah, pemotongan presisi, cuci rambut, pemijatan ringan, dan penataan pomade.",
   },
   {
-    id: "walk-in",
-    question: "Apakah bisa walk-in?",
+    id: "parking-facility",
+    question: "Apakah tersedia area parkir untuk mobil dan motor?",
     answer:
-      "Silakan tanyakan ketersediaan kursi melalui WhatsApp sebelum berkunjung.",
+      "Ya, Mono Barber memiliki area parkir gratis yang luas dan aman untuk kendaraan roda dua maupun mobil tepat di depan outlet.",
   },
   {
     id: "payment-methods",
     question: "Metode pembayaran apa saja yang diterima?",
     answer:
-      "Informasi metode pembayaran dapat ditanyakan langsung kepada barbershop.",
+      "Kami menerima pembayaran tunai (cash) serta non-tunai melalui QRIS (BCA, GoPay, OVO, ShopeePay, Dana, dll.) dan kartu debit.",
   },
   {
     id: "products-used",
     question: "Produk apa saja yang digunakan selama perawatan?",
     answer:
-      "Informasi produk yang digunakan dapat ditanyakan kepada barber saat konsultasi.",
+      "Kami hanya menggunakan produk grooming berkualitas premium seperti water-based & oil-based pomade, hair tonic beraroma maskulin segar, serta beard balm berbahan alami.",
   },
   {
     id: "reschedule-policy",
     question: "Bagaimana jika saya ingin mengubah jadwal (reschedule)?",
     answer:
-      "Hubungi barbershop melalui WhatsApp untuk menanyakan perubahan jadwal.",
+      "Anda dapat melakukan reschedule dengan menghubungi WhatsApp kami minimal 2 jam sebelum jam kunjungan yang dijadwalkan tanpa biaya tambahan.",
   },
 ];

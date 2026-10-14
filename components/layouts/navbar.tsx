@@ -48,8 +48,8 @@ export function Navbar() {
         >
           {site.navigation.map((item) => {
             const isActive =
-              item.href === "/"
-                ? pathname === "/"
+              item.href === site.routes.home
+                ? pathname === site.routes.home
                 : pathname.startsWith(item.href);
 
             return (
@@ -116,8 +116,8 @@ export function Navbar() {
           >
             {site.navigation.map((item) => {
               const isActive =
-                item.href === "/"
-                  ? pathname === "/"
+                item.href === site.routes.home
+                  ? pathname === site.routes.home
                   : pathname.startsWith(item.href);
 
               return (
@@ -169,5 +169,3 @@ export function Navbar() {
     </header>
   );
 }
-
-

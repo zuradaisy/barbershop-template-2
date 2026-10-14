@@ -36,7 +36,7 @@ export function SectionHeading({
             {kicker}
           </span>
         )}
-        <h2 className="font-sans text-2xl font-extrabold tracking-tight text-foreground uppercase sm:text-3xl lg:text-4xl">
+        <h2 className="font-display text-3xl leading-[1.05] font-bold tracking-tight text-foreground uppercase sm:text-4xl lg:text-5xl">
           {title}
         </h2>
         {description && (

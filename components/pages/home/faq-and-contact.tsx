@@ -53,9 +53,6 @@ export function FaqAndContact() {
             />
             {hasContact ? (
               <Card className="space-y-4">
-                <p className="text-xs leading-relaxed text-muted-foreground">
-                  {contact.demoNotice}
-                </p>
                 {contact.address.full ? (
                   <div className="flex items-start gap-3">
                     <LuMapPin
@@ -77,7 +74,7 @@ export function FaqAndContact() {
                       className="mt-0.5 size-4.5 shrink-0 text-accent"
                     />
                     <div className="text-sm">
-                      <p className="font-bold">Jam Operasional</p>
+                      <p className="font-bold">{faqAndContact.hoursLabel}</p>
                       <p className="text-muted-foreground">
                         {contact.hours.display}
                       </p>
@@ -91,7 +88,7 @@ export function FaqAndContact() {
                       className="mt-0.5 size-4.5 shrink-0 text-accent"
                     />
                     <div className="text-sm">
-                      <p className="font-bold">Telepon</p>
+                      <p className="font-bold">{faqAndContact.phoneLabel}</p>
                       <a
                         href={phoneLink()}
                         className="text-muted-foreground hover:text-foreground"
@@ -105,8 +102,7 @@ export function FaqAndContact() {
             ) : (
               <Card className="space-y-4">
                 <p className="text-sm leading-relaxed text-muted-foreground">
-                  Alamat, nomor kontak, dan jam operasional akan ditampilkan
-                  setelah data resmi tersedia.
+                  {faqAndContact.contactUnavailable}
                 </p>
                 <a
                   href={whatsappLink(site.whatsappMessages.navbarBooking)}
@@ -115,11 +111,11 @@ export function FaqAndContact() {
                   className={buttonStyles({
                     variant: "outline",
                     size: "md",
-                    className: "w-fit",
+                    className: "w-full justify-center",
                   })}
                 >
                   <FaWhatsapp aria-hidden="true" className="size-4" />
-                  Tanya melalui WhatsApp
+                  {faqAndContact.whatsappAction}
                 </a>
               </Card>
             )}
@@ -142,11 +138,11 @@ export function FaqAndContact() {
                   className={buttonStyles({
                     variant: "outline",
                     size: "md",
-                    className: "mt-4 justify-center font-bold",
+                    className: "mt-4 w-full justify-center font-bold",
                   })}
                 >
                   <LuExternalLink aria-hidden="true" className="size-4" />
-                  Buka Google Maps
+                  {faqAndContact.mapsAction}
                 </a>
               </>
             ) : null}

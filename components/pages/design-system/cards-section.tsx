@@ -47,7 +47,7 @@ export function CardsSection() {
             {cards.components.map((component) => (
               <li
                 key={component.name}
-                className="rounded-xl border border-border p-4"
+                className="rounded-sm border border-border p-4"
               >
                 <h4 className="font-bold">{component.name}</h4>
                 <p className="mt-1 text-sm text-muted-foreground">

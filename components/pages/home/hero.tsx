@@ -1,11 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaWhatsapp } from "react-icons/fa6";
 import { buttonStyles } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { home } from "@/content/home";
 import { site } from "@/content/site";
-import { whatsappLink } from "@/lib/links";
 
 export function HomeHero() {
   const { hero } = home;
@@ -31,7 +29,7 @@ export function HomeHero() {
         </p>
 
         <div className="grid grid-cols-1 items-end gap-6 lg:grid-cols-12 lg:gap-10">
-          <h1 className="max-w-5xl text-3xl leading-[1.02] font-bold tracking-tight whitespace-pre-line uppercase sm:text-6xl lg:col-span-8 lg:text-6xl xl:text-7xl">
+          <h1 className="max-w-5xl font-display text-4xl leading-[0.98] font-bold tracking-tight whitespace-pre-line uppercase sm:text-6xl lg:col-span-8 lg:text-7xl xl:text-8xl">
             {hero.title}
           </h1>
           <p className="max-w-md text-sm leading-relaxed text-hero-foreground/80 sm:text-base lg:col-span-3 lg:col-start-10 lg:pb-2">
@@ -48,19 +46,16 @@ export function HomeHero() {
             <span />
           )}
           <div className="flex flex-col gap-3 sm:flex-row">
-            <a
-              href={whatsappLink(hero.bookingMessage)}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href={hero.bookingHref}
               className={buttonStyles({
                 variant: "inverse",
                 size: "lg",
                 className: "w-full sm:w-auto",
               })}
             >
-              <FaWhatsapp aria-hidden="true" className="size-5" />
               <span>{hero.bookingLabel}</span>
-            </a>
+            </Link>
             <Link
               href={hero.servicesHref}
               className={buttonStyles({

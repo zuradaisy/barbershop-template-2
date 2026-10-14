@@ -14,7 +14,7 @@ export default function TeamPage() {
       <PageHeader
         kicker="Master Groomers"
         title="Tim & Kapster Kami"
-        description="Profil di halaman ini merupakan contoh tata letak. Ganti dengan identitas dan informasi tim yang telah dikonfirmasi sebelum situs dipublikasikan."
+        description="Kenali kapster Mono Barber, pengalaman, dan spesialisasi layanan grooming mereka."
         breadcrumbs={[{ label: "Tim" }]}
       />
       <TeamList />

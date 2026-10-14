@@ -9,6 +9,24 @@ export const bookingContent = {
   policyTitle: "Konfirmasi jadwal",
   policyDescription:
     "Tanggal dan jam yang dipilih merupakan preferensi, bukan slot yang telah tersedia. Booking berlaku setelah mendapat balasan dari barbershop.",
+  submitLabel: "Booking via WhatsApp",
+  summary: {
+    title: "Ringkasan pilihan",
+    serviceLabel: "Layanan",
+    durationLabel: "Durasi",
+    priceLabel: "Harga",
+  },
+  fields: {
+    nameLabel: "Nama Lengkap",
+    phoneLabel: "Nomor WhatsApp",
+    phoneHint: "Masukkan nomor yang dapat menerima balasan.",
+    serviceLabel: "Layanan",
+    dateLabel: "Tanggal pilihan",
+    timeLabel: "Jam pilihan",
+    notesLabel: "Catatan (opsional)",
+  },
+  confirmationNote:
+    "WhatsApp terbuka. Permintaan ini belum menjadi booking terkonfirmasi sampai barbershop membalas.",
   header: {
     eyebrow: "Online Reservation",
     title: "Booking Jadwal Grooming Anda",

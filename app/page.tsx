@@ -3,6 +3,7 @@ import { CtaBanner } from "@/components/pages/home/cta-banner";
 import { FaqAndContact } from "@/components/pages/home/faq-and-contact";
 import { GalleryPreview } from "@/components/pages/home/gallery-preview";
 import { HomeHero } from "@/components/pages/home/hero";
+import { QuickBookingForm } from "@/components/pages/home/quick-booking-form";
 import { ServicesPreview } from "@/components/pages/home/services-preview";
 import { TeamPreview } from "@/components/pages/home/team-preview";
 import { Testimonials } from "@/components/pages/home/testimonials";
@@ -20,6 +21,7 @@ export default function HomePage() {
       <HomeHero />
       <WhyUs />
       <ServicesPreview />
+      <QuickBookingForm />
       <GalleryPreview />
       <TeamPreview />
       <Testimonials />

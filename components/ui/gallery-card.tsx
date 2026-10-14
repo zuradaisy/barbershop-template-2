@@ -26,7 +26,7 @@ export function GalleryCard({
 
   return (
     <article className={cn("group", className)}>
-      <div className="relative aspect-[4/5] overflow-hidden bg-muted">
+      <div className="relative aspect-[4/5] overflow-hidden rounded-md bg-muted">
         <Image
           src={currentImage}
           alt={item.title}

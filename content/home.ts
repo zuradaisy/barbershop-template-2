@@ -8,9 +8,8 @@ export const home = {
       "Temukan gaya yang terasa seperti diri Anda melalui layanan grooming Mono Barber.",
     image: "/images/hero-barber.jpg",
     imageAlt: "Kapster Mono Barber sedang merapikan rambut pelanggan",
-    bookingLabel: "Booking via WhatsApp",
-    bookingMessage:
-      "Halo Mono Barber, saya ingin booking jadwal dari halaman beranda.",
+    bookingLabel: "Booking",
+    bookingHref: "#booking-form",
     servicesLabel: "Lihat Layanan",
     servicesHref: site.routes.services,
   },
@@ -43,22 +42,22 @@ export const home = {
   servicesPreview: {
     kicker: "Pilihan Grooming",
     title: "LAYANAN & HARGA",
-    description:
-      "Pilihan layanan grooming lengkap untuk tampilan terbaik Anda. Harga dan durasi saat ini adalah data demo.",
+    description: "Semua sesi sudah termasuk konsultasi dan penataan.",
     viewAllLabel: "Lihat Semua Layanan",
     viewAllHref: site.routes.services,
   },
   bookingForm: {
-    kicker: "Booking",
-    title: "Atur Jadwalmu dalam Beberapa Klik",
-    description:
-      "Kirim preferensi jadwal Anda melalui WhatsApp. Barbershop akan mengonfirmasi ketersediaannya.",
+    accessibleSectionLabel: "Form booking cepat",
+    descriptionFor: (serviceName: string) =>
+      `Kirim permintaan booking untuk ${serviceName}. Pilih tanggal dan jam kunjungan yang Anda inginkan.`,
     nameLabel: "Nama Lengkap",
     phoneLabel: "Nomor WhatsApp",
-    serviceLabel: "Layanan",
+    phoneValidation: "Masukkan nomor WhatsApp yang valid.",
+    serviceLabel: "Pilih layanan",
     dateLabel: "Tanggal pilihan",
     timeLabel: "Jam pilihan",
-    submitLabel: "Booking via WhatsApp",
+    timeZoneLabel: "WIB",
+    submitLabel: "Booking",
     successMessage:
       "WhatsApp terbuka. Permintaan jadwal Anda belum terkonfirmasi sampai barbershop membalas.",
     pendingNote:
@@ -86,7 +85,7 @@ export const home = {
     subtitle:
       "Sampaikan gaya dan waktu yang Anda inginkan. Jadwal akan dikonfirmasi melalui WhatsApp.",
     action: {
-      label: "Konsultasi WhatsApp",
+      label: "Tanya Sekarang",
       message: site.whatsappMessages.ctaBooking,
     },
   },
@@ -94,6 +93,12 @@ export const home = {
     faqKicker: "Tanya Jawab",
     contactKicker: "Kunjungan",
     addressLabel: site.labels.studioAddress,
+    hoursLabel: site.footer.hoursTitle,
+    phoneLabel: "Telepon",
+    contactUnavailable:
+      "Alamat, nomor kontak, dan jam operasional akan ditampilkan setelah data resmi tersedia.",
+    whatsappAction: "Tanya Sekarang",
+    mapsAction: "Buka Google Maps",
     faqTitle: "PERTANYAAN UMUM",
     contactTitle: "LOKASI & KONTAK",
   },

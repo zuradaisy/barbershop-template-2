@@ -61,7 +61,7 @@ export function PageHeader({
               {kicker}
             </span>
           )}
-          <h1 className="font-sans text-3xl font-extrabold tracking-tight text-foreground uppercase sm:text-4xl lg:text-5xl">
+          <h1 className="font-display text-4xl leading-[1.05] font-bold tracking-tight text-foreground uppercase sm:text-5xl lg:text-6xl">
             {title}
           </h1>
           <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">

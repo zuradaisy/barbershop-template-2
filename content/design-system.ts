@@ -190,23 +190,24 @@ export const designSystem = {
     title: "Tipografi",
     scaleTitle: "Skala teks",
     description:
-      "Gunakan bobot 400, 500, dan 700. Judul besar memakai tracking-tight, teks isi memakai leading yang lega.",
+      "Manrope 400/700 dipakai untuk isi dan UI. Oswald 700 dipakai untuk judul editorial; heading membesar bertahap dari section ke halaman dan hero.",
     samples: [
       {
         name: "Display",
-        className: "text-4xl font-bold tracking-tight sm:text-5xl",
+        className:
+          "font-display text-5xl leading-none font-bold tracking-tight sm:text-7xl",
         sample: "Judul utama halaman.",
         usage: "Satu per halaman, dipakai di hero.",
       },
       {
         name: "Judul section",
-        className: "text-2xl font-bold sm:text-3xl",
+        className: "font-display text-3xl leading-tight font-bold sm:text-5xl",
         sample: "Judul bagian konten.",
         usage: "Pembuka setiap section.",
       },
       {
         name: "Judul kartu",
-        className: "text-lg font-medium",
+        className: "text-lg font-bold",
         sample: "Nama kartu atau item.",
         usage: "Judul di dalam kartu dan daftar.",
       },
@@ -227,24 +228,24 @@ export const designSystem = {
   font: {
     title: "Font",
     sample: "Contoh tampilan font proyek.",
-    current: "--font-sans",
+    current: "--font-display untuk heading · --font-sans untuk isi/UI",
     description:
-      "Proyek memakai system font stack lokal yang dipetakan ke token --font-sans agar build tidak bergantung pada Google Fonts.",
+      "Oswald 700 memberi heading yang padat dan tegas. Manrope 400/700 menjaga isi dan kontrol tetap bersih dan mudah dibaca. Keduanya dimuat lewat next/font dan dipetakan ke token proyek.",
   },
   radius: {
     title: "Radius",
     description:
-      "Radius dipakai seperlunya: kontrol memakai rounded-md, foto About rounded-md, dan potret tim berbentuk lingkaran. Panel editorial tidak wajib rounded.",
+      "Panel dan kartu memakai rounded-sm (6px), kontrol memakai rounded-md (8px), dan gambar memakai rounded-md (8px). Potret tim tetap bulat sebagai treatment khusus.",
     tokens: [
+      {
+        name: "--radius-sm",
+        className: "rounded-sm",
+        usage: "Panel dan kartu informasi.",
+      },
       {
         name: "--radius-md",
         className: "rounded-md",
-        usage: "Kontrol, input, badge, tab, tombol, dan link navigasi.",
-      },
-      {
-        name: "--radius-xl",
-        className: "rounded-xl",
-        usage: "Panel tertentu; foto editorial mengikuti bentuk referensi.",
+        usage: "Tombol dan kontrol; sudut gambar layanan, galeri, dan About.",
       },
       {
         name: "rounded-full",
@@ -366,7 +367,7 @@ export const designSystem = {
     contentCard: {
       title: "ContentCard",
       description:
-        "Komponen bersama dengan varian row, service, dan profile; foto layanan/tim memakai warna aslinya.",
+        "Varian layanan dan tim memakai panel abu dengan border tipis dan radius sm. Hover mencerahkan panel dan memberi aksen merah pada judul; foto tetap bersudut tajam. Label radius sm, tombol hitam tanpa garis pemisah internal.",
       rowLabel: "Varian baris",
       cardLabel: "Varian kartu",
     },

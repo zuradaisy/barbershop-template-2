@@ -49,8 +49,14 @@ export function ContentCard({
   actions = [],
   className,
 }: ContentCardProps) {
+  const isCatalogCard = variant === "service" || variant === "profile";
   const titleContent = href ? (
-    <Link href={href} className="hover:text-accent">
+    <Link
+      href={href}
+      className={
+        isCatalogCard ? "transition-colors group-hover/card:text-accent" : ""
+      }
+    >
       {title}
     </Link>
   ) : (
@@ -99,8 +105,11 @@ export function ContentCard({
   return (
     <article
       className={cn(
-        "group/card flex h-full flex-col overflow-hidden border border-transparent bg-background transition-colors duration-150",
-        (href || actions.length > 0) && "hover:border-border",
+        "group/card flex h-full flex-col overflow-hidden rounded-sm border transition-colors duration-150",
+        isCatalogCard
+          ? "border-border bg-muted/40 hover:border-muted-foreground/40 hover:bg-background"
+          : "border-transparent bg-background",
+        !isCatalogCard && (href || actions.length > 0) && "hover:border-border",
         className,
       )}
     >
@@ -120,12 +129,12 @@ export function ContentCard({
           />
           <div className="absolute top-2 left-2 flex flex-wrap gap-1.5">
             {eyebrow ? (
-              <span className="bg-primary px-2 py-1 text-[10px] font-bold text-primary-foreground uppercase">
+              <span className="rounded-sm bg-primary px-2 py-1 text-[10px] font-bold text-primary-foreground uppercase">
                 {eyebrow}
               </span>
             ) : null}
             {imageBadge ? (
-              <span className="bg-accent px-2 py-1 text-[10px] font-bold text-accent-foreground uppercase">
+              <span className="rounded-sm bg-accent px-2 py-1 text-[10px] font-bold text-accent-foreground uppercase">
                 {imageBadge}
               </span>
             ) : null}
@@ -133,7 +142,7 @@ export function ContentCard({
         </div>
       ) : null}
 
-      <div className="flex flex-1 flex-col gap-2 p-4">
+      <div className="flex flex-1 flex-col gap-3 p-5 sm:p-6">
         {meta || price ? (
           <div className="flex flex-wrap items-center justify-between gap-2 text-sm">
             {meta ? (
@@ -168,12 +177,13 @@ export function ContentCard({
       </div>
 
       {actions.length > 0 ? (
-        <div className="mt-auto flex gap-2 border-t border-border p-3">
+        <div className="mt-auto flex gap-2 p-5 pt-0 sm:p-6 sm:pt-0">
           {actions.map((action) => {
             const className = buttonStyles({
-              variant: action.variant ?? "outline",
-              size: "sm",
-              className: "w-full",
+              variant: action.variant ?? "primary",
+              size: "md",
+              className:
+                "w-full bg-inverse text-inverse-foreground hover:bg-inverse/90",
             });
 
             return action.external ? (

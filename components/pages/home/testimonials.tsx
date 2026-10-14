@@ -60,11 +60,6 @@ export function Testimonials() {
                 )}
               </div>
             ) : null}
-            {activeTestimonial.isDemo ? (
-              <p className="mb-3 text-[10px] font-bold tracking-widest text-accent uppercase">
-                Contoh Testimoni · Demo
-              </p>
-            ) : null}
             <blockquote
               key={activeTestimonial.id}
               className="mx-auto max-w-3xl text-base leading-relaxed font-medium text-foreground sm:text-lg lg:text-xl"

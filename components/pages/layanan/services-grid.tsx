@@ -33,7 +33,7 @@ export function ServicesGrid() {
                 : "border border-border bg-background text-muted-foreground hover:bg-muted hover:text-foreground",
             )}
           >
-            Semua Layanan ({services.length})
+            {serviceUi.allServicesLabel} ({services.length})
           </button>
           {serviceCategories.map((cat) => (
             <button
@@ -65,13 +65,17 @@ export function ServicesGrid() {
               description={service.shortDescription}
               price={service.price}
               image={{ src: service.image, alt: service.name }}
-              imageBadge={service.isPopular ? "Favorit" : undefined}
-              metaIcon={<LuClock aria-hidden="true" className="size-3.5" />}
+              imageBadge={
+                service.isPopular ? serviceUi.favoriteLabel : undefined
+              }
+              metaIcon={
+                <LuClock aria-hidden="true" className="size-3.5 text-accent" />
+              }
               actions={[
                 {
                   label: serviceUi.detailAction,
                   href: serviceHref(service.slug),
-                  variant: "outline",
+                  variant: "primary",
                 },
               ]}
             />

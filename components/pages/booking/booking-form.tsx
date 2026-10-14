@@ -38,6 +38,8 @@ export function BookingForm({
   const notesId = useId();
   const selectedService =
     services.find((service) => service.id === serviceId) ?? services[0];
+  const fields = bookingContent.fields;
+  const summary = bookingContent.summary;
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -80,7 +82,7 @@ export function BookingForm({
               </p>
             </div>
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-              <Field id={nameId} label="Nama Lengkap">
+              <Field id={nameId} label={fields.nameLabel}>
                 <Input
                   id={nameId}
                   autoComplete="name"
@@ -92,8 +94,8 @@ export function BookingForm({
               </Field>
               <Field
                 id={phoneId}
-                label="Nomor WhatsApp"
-                hint="Masukkan nomor yang dapat menerima balasan."
+                label={fields.phoneLabel}
+                hint={fields.phoneHint}
               >
                 <Input
                   id={phoneId}
@@ -107,7 +109,7 @@ export function BookingForm({
                 />
               </Field>
             </div>
-            <Field id={serviceIdInput} label="Layanan">
+            <Field id={serviceIdInput} label={fields.serviceLabel}>
               <Select
                 id={serviceIdInput}
                 value={serviceId}
@@ -122,7 +124,7 @@ export function BookingForm({
               </Select>
             </Field>
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-              <Field id={dateId} label="Tanggal pilihan">
+              <Field id={dateId} label={fields.dateLabel}>
                 <Input
                   id={dateId}
                   type="date"
@@ -131,7 +133,7 @@ export function BookingForm({
                   required
                 />
               </Field>
-              <Field id={timeId} label="Jam pilihan">
+              <Field id={timeId} label={fields.timeLabel}>
                 <Input
                   id={timeId}
                   type="time"
@@ -141,7 +143,7 @@ export function BookingForm({
                 />
               </Field>
             </div>
-            <Field id={notesId} label="Catatan (opsional)">
+            <Field id={notesId} label={fields.notesLabel}>
               <Textarea
                 id={notesId}
                 rows={4}
@@ -150,18 +152,13 @@ export function BookingForm({
               />
             </Field>
             <div>
-              <Button
-                type="submit"
-                size="lg"
-                className="w-full justify-center sm:w-auto"
-              >
+              <Button type="submit" size="lg" className="w-full justify-center">
                 <FaWhatsapp aria-hidden="true" className="size-5" />
-                Booking via WhatsApp
+                {bookingContent.submitLabel}
               </Button>
               {submitted ? (
                 <p role="status" className="mt-3 text-sm text-muted-foreground">
-                  WhatsApp terbuka. Permintaan ini belum menjadi booking
-                  terkonfirmasi sampai barbershop membalas.
+                  {bookingContent.confirmationNote}
                 </p>
               ) : null}
             </div>
@@ -171,21 +168,25 @@ export function BookingForm({
             <Card className="p-5 sm:p-6">
               <div className="flex items-center gap-2 border-b border-border pb-4">
                 <LuScissors aria-hidden="true" className="size-4" />
-                <h2 className="font-bold uppercase">Ringkasan pilihan</h2>
+                <h2 className="font-bold uppercase">{summary.title}</h2>
               </div>
               <dl className="mt-4 space-y-3 text-sm">
                 <div className="flex justify-between gap-4">
-                  <dt className="text-muted-foreground">Layanan</dt>
+                  <dt className="text-muted-foreground">
+                    {summary.serviceLabel}
+                  </dt>
                   <dd className="text-right font-semibold">
                     {selectedService.name}
                   </dd>
                 </div>
                 <div className="flex justify-between gap-4">
-                  <dt className="text-muted-foreground">Durasi</dt>
+                  <dt className="text-muted-foreground">
+                    {summary.durationLabel}
+                  </dt>
                   <dd>{selectedService.duration}</dd>
                 </div>
                 <div className="flex justify-between gap-4 border-t border-border pt-3">
-                  <dt className="font-semibold">Harga</dt>
+                  <dt className="font-semibold">{summary.priceLabel}</dt>
                   <dd className="font-bold">{selectedService.price}</dd>
                 </div>
               </dl>

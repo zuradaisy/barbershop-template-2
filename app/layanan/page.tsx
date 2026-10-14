@@ -14,7 +14,7 @@ export default function ServicesPage() {
       <PageHeader
         kicker="Menu Grooming Lengkap"
         title="Layanan & Harga"
-        description="Jelajahi pilihan layanan grooming pria. Nama layanan, harga, dan durasi pada halaman ini masih berupa data demo."
+        description="Jelajahi menu grooming Mono Barber, lengkap dengan deskripsi, harga, dan perkiraan durasi layanan."
         breadcrumbs={[{ label: "Layanan" }]}
       />
       <ServicesGrid />

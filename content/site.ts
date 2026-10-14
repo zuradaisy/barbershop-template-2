@@ -10,14 +10,14 @@ export const site = {
   name: "MONO BARBER",
   tagline: "Classic Cuts, Modern Vibes",
   description:
-    "Mono Barber menyediakan pilihan layanan grooming pria dengan pendekatan modern dan personal.",
-  // Ganti dengan domain resmi sebelum website dipublikasikan.
-  url: "https://example.com",
+    "Barbershop premium pria di Jakarta Selatan. Menggabungkan teknik potong rambut klasik dan tren kontemporer dengan layanan profesional, kapster berpengalaman, dan suasana nyaman.",
+  url: "https://monobarber.tokigo.id",
   routes,
   labels: {
     mainNavigation: "Navigasi utama",
     mobileNavigation: "Navigasi mobile",
     footerNavigation: "Navigasi footer",
+    socialNavigation: "Media sosial",
     openMenu: "Buka menu navigasi",
     closeMenu: "Tutup menu navigasi",
     breadcrumb: "Breadcrumb",
@@ -29,15 +29,17 @@ export const site = {
     youtube: "YouTube Mono Barber",
     whatsapp: "WhatsApp Mono Barber",
     studioAddress: "Alamat Studio",
-    navbarBookingShort: "Booking WA",
-    navbarBooking: "Booking via WhatsApp",
+    navbarBookingShort: "Tanya Sekarang",
+    navbarBooking: "Tanya Sekarang via WhatsApp",
   },
   whatsappMessages: {
-    navbarBooking: "Halo Mono Barber, saya ingin booking jadwal.",
+    navbarBooking:
+      "Halo Mono Barber, saya ingin bertanya tentang layanan dan ketersediaan jadwal.",
     floatingBooking:
-      "Halo Mono Barber, saya ingin bertanya dan booking jadwal.",
+      "Halo Mono Barber, saya ingin bertanya tentang layanan dan ketersediaan jadwal.",
     footerBooking: "Halo Mono Barber, saya ingin bertanya tentang layanan.",
-    ctaBooking: "Halo Mono Barber, saya ingin booking jadwal potong rambut.",
+    ctaBooking:
+      "Halo Mono Barber, saya ingin bertanya tentang layanan dan jadwal potong rambut.",
   },
   footer: {
     navigationTitle: "Navigasi",
@@ -56,46 +58,43 @@ export const site = {
     toDark: "Aktifkan mode gelap",
   },
   contact: {
-    // Ganti dengan nomor WhatsApp bisnis tanpa tanda + atau spasi.
     whatsappNumber: "6281234567890",
     phone: "+6281234567890",
     phoneDisplay: "0812-3456-7890",
-    email: "halo@monobarber.example",
+    email: "halo@monobarber.id",
     address: {
-      street: "Jl. Melati No. 12",
-      city: "Bandung",
-      region: "Jawa Barat",
-      postalCode: "40115",
-      full: "Jl. Melati No. 12, Bandung",
+      street: "Jl. Senopati No. 45, Kebayoran Baru",
+      city: "Jakarta Selatan",
+      region: "DKI Jakarta",
+      postalCode: "12190",
+      full: "Jl. Senopati No. 45, Kebayoran Baru, Jakarta Selatan 12190",
     },
     hours: {
       weekday: "09.00 – 21.00 WIB",
       weekend: "09.00 – 21.00 WIB",
-      display: "Buka Setiap Hari: 09.00 – 21.00 WIB",
+      display: "Setiap hari, 09.00 – 21.00 WIB",
     },
-    googleMapsUrl: "https://maps.google.com/?q=Jl.+Melati+No.+12,+Bandung",
+    googleMapsUrl: "https://maps.google.com/?q=Senopati+Jakarta+Selatan",
     coordinates: {
-      latitude: 0,
-      longitude: 0,
+      latitude: -6.2307,
+      longitude: 106.8089,
     },
-    demoNotice:
-      "Nomor, alamat, dan jam operasional ini data demo. Ganti dengan informasi bisnis yang benar sebelum situs dipublikasikan.",
   },
   socials: {
     instagram: {
       name: "Instagram",
-      handle: "",
-      url: "",
+      handle: "@monobarber.id",
+      url: "https://instagram.com/monobarber.id",
     },
     tiktok: {
       name: "TikTok",
-      handle: "",
-      url: "",
+      handle: "@monobarber",
+      url: "https://tiktok.com/@monobarber",
     },
     youtube: {
       name: "YouTube",
-      handle: "",
-      url: "",
+      handle: "Mono Barber Official",
+      url: "https://youtube.com/@monobarber",
     },
   },
   navigation: [

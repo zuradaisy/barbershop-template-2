@@ -7,49 +7,52 @@ export type Barber = {
   specialization: string[];
   bio: string;
   photo: string;
-  isDemo: boolean;
 };
 
-// Semua profil di bawah ini adalah data demonstrasi, bukan identitas staf sebenarnya.
 export const teamMembers: Barber[] = [
   {
-    id: "fahdil-pratama-demo",
-    name: "Fahdil Pratama",
-    role: "Head Barber",
-    title: "Head Barber",
-    experience: "5+ tahun (demo)",
-    specialization: ["Fade", "Classic Cut"],
-    bio: "Profil demonstrasi untuk menampilkan tata letak tim. Ganti dengan detail yang telah disetujui.",
+    id: "radja-pratama",
+    name: "Radja Pratama",
+    role: "Head Barber & Founder",
+    title: "Head Barber & Founder",
+    experience: "8+ Tahun Pengalaman",
+    specialization: ["Scissors Cut", "Fade"],
+    bio: "Berpengalaman lebih dari 8 tahun di industri grooming pria. Menguasai teknik gunting manual presisi dan gradasi fade.",
     photo: "/images/team-radja.jpg",
-    isDemo: true,
   },
   {
-    id: "duta-guntur-demo",
+    id: "duta-guntur",
     name: "Duta Guntur",
     role: "Senior Barber",
     title: "Senior Barber",
-    experience: "3+ tahun (demo)",
-    specialization: ["Beard Grooming", "Taper"],
-    bio: "Profil demonstrasi untuk menampilkan tata letak tim. Ganti dengan detail yang telah disetujui.",
+    experience: "6+ Tahun Pengalaman",
+    specialization: ["Beard Grooming", "Traditional Shave"],
+    bio: "Spesialis perawatan janggut dan cukur tradisional. Membentuk garis janggut agar selaras dengan kontur wajah.",
     photo: "/images/team-duta.jpg",
-    isDemo: true,
   },
   {
-    id: "reza-fahrezi-demo",
+    id: "reza-fahrezi",
     name: "Reza Fahrezi",
-    role: "Barber",
-    title: "Barber",
-    experience: "2+ tahun (demo)",
-    specialization: ["Classic Cut", "Styling"],
-    bio: "Profil demonstrasi untuk menampilkan tata letak tim. Ganti dengan detail yang telah disetujui.",
+    role: "Stylist & Colorist",
+    title: "Stylist & Colorist",
+    experience: "5+ Tahun Pengalaman",
+    specialization: ["Modern Styling", "Hair Color"],
+    bio: "Berfokus pada potongan rambut kontemporer, tekstur rambut, dan layanan pewarnaan.",
     photo: "/images/team-reza.jpg",
-    isDemo: true,
+  },
+  {
+    id: "arief-maulana",
+    name: "Arief Maulana",
+    role: "Grooming & Scalp Specialist",
+    title: "Grooming & Scalp Specialist",
+    experience: "4+ Tahun Pengalaman",
+    specialization: ["Scalp Treatment", "Relaxing Massage"],
+    bio: "Menangani perawatan kulit kepala serta sesi pijat relaksasi kepala, leher, dan pundak.",
+    photo: "/images/team-arief.jpg",
   },
 ];
 
 export const teamUi = {
   scheduleLabel: "Jadwal",
-  bookingLabel: "Ajukan Booking",
-  demoNotice:
-    "Data nama, peran, pengalaman, dan foto di halaman ini adalah contoh untuk keperluan desain.",
+  bookingLabel: "Booking",
 };

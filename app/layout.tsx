@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { Manrope, Oswald } from "next/font/google";
 import { FloatingWa } from "@/components/layouts/floating-wa";
 import { Footer } from "@/components/layouts/footer";
 import { Navbar } from "@/components/layouts/navbar";
@@ -7,6 +8,20 @@ import { SkipLink } from "@/components/layouts/skip-link";
 import { ThemeScript } from "@/components/layouts/theme-script";
 import { site } from "@/content/site";
 import "@/styles/globals.css";
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-manrope",
+  display: "swap",
+});
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  weight: "700",
+  variable: "--font-oswald",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -43,7 +58,11 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="id" suppressHydrationWarning className="h-full antialiased">
+    <html
+      lang="id"
+      suppressHydrationWarning
+      className={`h-full antialiased ${manrope.variable} ${oswald.variable}`}
+    >
       <body className="flex min-h-full flex-col bg-background text-foreground selection:bg-primary/20 selection:text-foreground">
         <ThemeScript />
         <SkipLink label={site.skipLinkLabel} />
