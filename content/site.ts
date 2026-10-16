@@ -7,7 +7,7 @@ const routes = {
 };
 
 export const site = {
-  name: "MONO BARBER",
+  name: "CROSSCUT BARBER",
   tagline: "Classic Cuts, Modern Vibes",
   description:
     "Barbershop premium pria di Jakarta Selatan. Menggabungkan teknik potong rambut klasik dan tren kontemporer dengan layanan profesional, kapster berpengalaman, dan suasana nyaman.",
@@ -23,23 +23,23 @@ export const site = {
     breadcrumb: "Breadcrumb",
     home: "Beranda",
     quickContact: "Kontak cepat WhatsApp",
-    contactWhatsApp: "Hubungi WhatsApp Mono Barber",
-    instagram: "Instagram Mono Barber",
-    tiktok: "TikTok Mono Barber",
-    youtube: "YouTube Mono Barber",
-    whatsapp: "WhatsApp Mono Barber",
+    contactWhatsApp: "Hubungi WhatsApp Crosscut Barber",
+    instagram: "Instagram Crosscut Barber",
+    tiktok: "TikTok Crosscut Barber",
+    youtube: "YouTube Crosscut Barber",
+    whatsapp: "WhatsApp Crosscut Barber",
     studioAddress: "Alamat Studio",
     navbarBookingShort: "Tanya Sekarang",
     navbarBooking: "Tanya Sekarang via WhatsApp",
   },
   whatsappMessages: {
     navbarBooking:
-      "Halo Mono Barber, saya ingin bertanya tentang layanan dan ketersediaan jadwal.",
+      "Halo Crosscut Barber, saya ingin bertanya tentang layanan dan ketersediaan jadwal.",
     floatingBooking:
-      "Halo Mono Barber, saya ingin bertanya tentang layanan dan ketersediaan jadwal.",
-    footerBooking: "Halo Mono Barber, saya ingin bertanya tentang layanan.",
+      "Halo Crosscut Barber, saya ingin bertanya tentang layanan dan ketersediaan jadwal.",
+    footerBooking: "Halo Crosscut Barber, saya ingin bertanya tentang layanan.",
     ctaBooking:
-      "Halo Mono Barber, saya ingin bertanya tentang layanan dan jadwal potong rambut.",
+      "Halo Crosscut Barber, saya ingin bertanya tentang layanan dan jadwal potong rambut.",
   },
   footer: {
     navigationTitle: "Navigasi",
@@ -93,7 +93,7 @@ export const site = {
     },
     youtube: {
       name: "YouTube",
-      handle: "Mono Barber Official",
+      handle: "Crosscut Barber Official",
       url: "https://youtube.com/@monobarber",
     },
   },

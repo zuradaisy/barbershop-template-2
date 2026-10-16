@@ -22,7 +22,7 @@ export const faqItems: FaqItem[] = [
     id: "parking-facility",
     question: "Apakah tersedia area parkir untuk mobil dan motor?",
     answer:
-      "Ya, Mono Barber memiliki area parkir gratis yang luas dan aman untuk kendaraan roda dua maupun mobil tepat di depan outlet.",
+      "Ya, Crosscut Barber memiliki area parkir gratis yang luas dan aman untuk kendaraan roda dua maupun mobil tepat di depan outlet.",
   },
   {
     id: "payment-methods",

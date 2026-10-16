@@ -18,9 +18,8 @@ export function ServicesPreview() {
         <SectionHeading
           kicker={servicesPreview.kicker}
           title={servicesPreview.title}
-          description={servicesPreview.description}
         />
-        <div className="mt-5 divide-y divide-border border-y border-border">
+        <div className="mt-5 space-y-1">
           {previewServices.map((service, index) => (
             <ContentCard
               key={service.id}
@@ -37,7 +36,7 @@ export function ServicesPreview() {
         </div>
         <Link
           href={servicesPreview.viewAllHref}
-          className="mt-5 inline-flex items-center gap-2 text-sm font-semibold uppercase hover:text-accent"
+          className="mt-5 inline-flex items-center gap-2 text-base font-normal hover:text-accent-text"
         >
           {servicesPreview.viewAllLabel}
           <LuArrowRight aria-hidden="true" className="size-4" />

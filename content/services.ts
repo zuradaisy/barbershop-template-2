@@ -34,7 +34,7 @@ export const services: Service[] = [
     shortDescription:
       "Potong rambut presisi sesuai bentuk kepala, cuci bersih dengan hair tonic, dan styling pomade premium.",
     fullDescription:
-      "Layanan potong rambut andalan Mono Barber. Dimulai dengan konsultasi mendalam untuk menentukan potongan yang paling sesuai dengan proporsi wajah dan jenis rambut Anda. Dikerjakan dengan teknik gunting dan clipper presisi, dilanjutkan keramas air hangat menyegarkan, pijatan kepala ringan, pengeringan, serta penataan menggunakan pomade pilihan.",
+      "Layanan potong rambut andalan Crosscut Barber. Dimulai dengan konsultasi mendalam untuk menentukan potongan yang paling sesuai dengan proporsi wajah dan jenis rambut Anda. Dikerjakan dengan teknik gunting dan clipper presisi, dilanjutkan keramas air hangat menyegarkan, pijatan kepala ringan, pengeringan, serta penataan menggunakan pomade pilihan.",
     category: "haircut",
     categoryLabel: "Haircut & Styling",
     price: "Rp 50.000",
@@ -126,7 +126,7 @@ export const services: Service[] = [
     shortDescription:
       "Paket perawatan lengkap: Haircut + Beard Grooming + Hot Towel + Pijat Leher & Kepala + Face Refresh.",
     fullDescription:
-      "Layanan terlengkap dan paling diminati di Mono Barber. Didesain untuk pria yang menginginkan transformasi maksimal dari ujung rambut hingga wajah dalam satu sesi privat tanpa terburu-buru. Meremajakan tubuh sekaligus mempertegas gaya.",
+      "Layanan terlengkap dan paling diminati di Crosscut Barber. Didesain untuk pria yang menginginkan transformasi maksimal dari ujung rambut hingga wajah dalam satu sesi privat tanpa terburu-buru. Meremajakan tubuh sekaligus mempertegas gaya.",
     category: "package",
     categoryLabel: "Paket Lengkap",
     price: "Rp 120.000",
@@ -275,5 +275,5 @@ export const serviceUi = {
     },
   ],
   whatsappMessage: (service: Service) =>
-    `Halo Mono Barber, saya ingin bertanya tentang ketersediaan jadwal untuk layanan ${service.name} (${service.price}, ${service.duration}).`,
+    `Halo Crosscut Barber, saya ingin bertanya tentang ketersediaan jadwal untuk layanan ${service.name} (${service.price}, ${service.duration}).`,
 };

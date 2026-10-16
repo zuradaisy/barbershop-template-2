@@ -92,7 +92,7 @@ export function ServiceDetailView({ service }: { service: Service }) {
                       key={step}
                       className="flex items-start gap-3 border-b border-border py-3 text-base"
                     >
-                      <span className="font-bold text-accent">
+                      <span className="font-bold text-accent-text">
                         {String(index + 1).padStart(2, "0")}
                       </span>
                       <span>{step}</span>
@@ -128,7 +128,7 @@ export function ServiceDetailView({ service }: { service: Service }) {
             <div className="space-y-4 sm:sticky sm:top-24">
               <Card className="space-y-6 p-5 sm:p-6">
                 <div>
-                  <span className="text-xs font-bold text-accent uppercase">
+                  <span className="text-xs font-bold text-accent-text uppercase">
                     {serviceUi.reservationEyebrow}
                   </span>
                   <h2 className="mt-1 text-xl font-bold uppercase">

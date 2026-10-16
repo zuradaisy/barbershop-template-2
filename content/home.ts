@@ -2,12 +2,12 @@ import { site } from "@/content/site";
 
 export const home = {
   hero: {
-    kicker: "MONO BARBER · GROOMING PRIA",
+    kicker: "CROSSCUT BARBER · GROOMING PRIA",
     title: "UBAH PENAMPILAN,\nTEGASKAN GAYA",
     description:
-      "Temukan gaya yang terasa seperti diri Anda melalui layanan grooming Mono Barber.",
+      "Temukan gaya yang terasa seperti diri Anda melalui layanan grooming Crosscut Barber.",
     image: "/images/hero-barber.jpg",
-    imageAlt: "Kapster Mono Barber sedang merapikan rambut pelanggan",
+    imageAlt: "Kapster Crosscut Barber sedang merapikan rambut pelanggan",
     bookingLabel: "Booking",
     bookingHref: "#booking-form",
     servicesLabel: "Lihat Layanan",
@@ -15,9 +15,9 @@ export const home = {
   },
   whyUs: {
     kicker: "Tentang Kami",
-    title: "Mono Barber",
+    title: "Crosscut Barber",
     description:
-      "Mono Barber berfokus pada grooming pria dengan pilihan gaya dan layanan yang dapat disesuaikan melalui konsultasi.",
+      "Crosscut Barber berfokus pada grooming pria dengan pilihan gaya dan layanan yang dapat disesuaikan melalui konsultasi.",
     image: "/images/about.avif",
     imageAlt: "Alat-alat grooming di atas meja barber",
     advantagesTitle: "Keunggulan Kami",
@@ -42,12 +42,13 @@ export const home = {
   servicesPreview: {
     kicker: "Pilihan Grooming",
     title: "LAYANAN & HARGA",
-    description: "Semua sesi sudah termasuk konsultasi dan penataan.",
     viewAllLabel: "Lihat Semua Layanan",
     viewAllHref: site.routes.services,
   },
   bookingForm: {
     accessibleSectionLabel: "Form booking cepat",
+    kicker: "Reservasi",
+    title: "BOOKING JADWAL",
     descriptionFor: (serviceName: string) =>
       `Kirim permintaan booking untuk ${serviceName}. Pilih tanggal dan jam kunjungan yang Anda inginkan.`,
     nameLabel: "Nama Lengkap",
@@ -62,18 +63,18 @@ export const home = {
       "WhatsApp terbuka. Permintaan jadwal Anda belum terkonfirmasi sampai barbershop membalas.",
     pendingNote:
       "Tanggal dan jam adalah preferensi; jadwal menunggu konfirmasi barbershop.",
-    messageIntro: "Halo Mono Barber, saya ingin mengajukan booking:",
+    messageIntro: "Halo Crosscut Barber, saya ingin mengajukan booking:",
   },
   galleryPreview: {
     kicker: "Portfolio & Hasil Potong",
     title: "HASIL KERJA",
-    viewAllLabel: "Lihat Galeri →",
+    viewAllLabel: "Lihat Galeri",
     viewAllHref: site.routes.gallery,
   },
   teamPreview: {
     kicker: "MASTER GROOMERS",
     title: "TIM KAMI",
-    viewAllLabel: "Lihat Semua Tim →",
+    viewAllLabel: "Lihat Semua Tim",
     viewAllHref: site.routes.team,
   },
   testimonials: {

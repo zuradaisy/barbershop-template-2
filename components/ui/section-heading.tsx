@@ -25,22 +25,22 @@ export function SectionHeading({
   return (
     <div
       className={cn(
-        "flex flex-col items-start gap-3",
+        "flex flex-col items-start gap-3 sm:gap-4",
         align === "center" ? "items-center text-center" : "text-left",
         className,
       )}
     >
-      <div className={cn("space-y-1", align === "center" && "max-w-2xl")}>
+      <div className={cn("space-y-2", align === "center" && "max-w-2xl")}>
         {kicker && (
-          <span className="text-xs font-bold tracking-widest text-accent uppercase">
+          <span className="text-xs font-bold tracking-widest text-accent-text uppercase">
             {kicker}
           </span>
         )}
-        <h2 className="font-display text-3xl leading-[1.05] font-bold tracking-tight text-foreground uppercase sm:text-4xl lg:text-5xl">
+        <h2 className="font-display text-[32px] leading-[1.05] font-bold tracking-tight text-foreground uppercase sm:text-[40px]">
           {title}
         </h2>
         {description && (
-          <p className="text-xs text-muted-foreground sm:text-sm">
+          <p className="max-w-prose text-base leading-relaxed text-muted-foreground">
             {description}
           </p>
         )}
@@ -49,10 +49,10 @@ export function SectionHeading({
       {actionLink && (
         <Link
           href={actionLink.href}
-          className="group inline-flex items-center gap-1.5 text-xs font-bold tracking-wider text-muted-foreground uppercase transition-colors hover:text-foreground"
+          className="group inline-flex items-center gap-2 text-base font-normal text-muted-foreground transition-colors hover:text-foreground"
         >
           <span>{actionLink.label}</span>
-          <LuArrowRight className="size-3.5" />
+          <LuArrowRight className="size-4" />
         </Link>
       )}
     </div>

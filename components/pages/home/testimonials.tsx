@@ -24,7 +24,7 @@ export function Testimonials() {
   }
 
   return (
-    <Section className="bg-background">
+    <Section className="bg-muted/40">
       <Container>
         <SectionHeading
           kicker={testiContent.kicker}

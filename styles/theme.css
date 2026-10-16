@@ -9,8 +9,10 @@
   --ring: #09090b;
   --destructive: #dc2626;
   --radius: 0.5rem;
-  --accent: #d62828;
-  --accent-foreground: #ffffff;
+  --panel-shadow: 0 2px 12px rgb(9 9 11 / 0.06);
+  --accent: #f15025;
+  --accent-text: #c43e19;
+  --accent-foreground: #09090b;
   --whatsapp: #25d366;
   --whatsapp-foreground: #052e16;
   --hero-scrim: #09090b;
@@ -31,8 +33,10 @@
   --border: #27272a;
   --ring: #f4f4f5;
   --destructive: #ef4444;
-  --accent: #f87171;
-  --accent-foreground: #18181b;
+  --panel-shadow: 0 2px 12px rgb(0 0 0 / 0.28);
+  --accent: #f15025;
+  --accent-text: #f15025;
+  --accent-foreground: #09090b;
   --whatsapp: #25d366;
   --whatsapp-foreground: #052e16;
   --hero-scrim: #09090b;
@@ -54,6 +58,7 @@
   --color-ring: var(--ring);
   --color-destructive: var(--destructive);
   --color-accent: var(--accent);
+  --color-accent-text: var(--accent-text);
   --color-accent-foreground: var(--accent-foreground);
   --color-whatsapp: var(--whatsapp);
   --color-whatsapp-foreground: var(--whatsapp-foreground);
@@ -61,10 +66,10 @@
   --color-hero-foreground: var(--hero-foreground);
   --color-inverse: var(--inverse);
   --color-inverse-foreground: var(--inverse-foreground);
-  --radius-sm: calc(var(--radius) * 0.75);
+  --radius-sm: calc(var(--radius) - 2px);
   --radius-md: var(--radius);
-  --radius-lg: calc(var(--radius) * 1.5);
-  --radius-xl: calc(var(--radius) * 2);
+  --radius-lg: calc(var(--radius) + 4px);
+  --shadow-panel: var(--panel-shadow);
   --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
   --font-sans: var(--font-body);
   --font-display: var(--font-display-family);

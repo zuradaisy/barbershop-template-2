@@ -36,6 +36,6 @@ export const testimonials: Testimonial[] = [
     name: "Fahmi Salim",
     role: "Architect, Kemang",
     quote:
-      "Cari barbershop yang paham bentuk brewok dan rahang susah banget, tapi di Mono Barber hasilnya presisi dan garisnya tajam rapi. Sangat recommended buat grooming rutin.",
+      "Cari barbershop yang paham bentuk brewok dan rahang susah banget, tapi di Crosscut Barber hasilnya presisi dan garisnya tajam rapi. Sangat recommended buat grooming rutin.",
   },
 ];

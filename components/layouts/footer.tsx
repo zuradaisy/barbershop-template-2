@@ -14,7 +14,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-9 sm:grid-cols-2 lg:grid-cols-[1.1fr_0.8fr_1.2fr_1fr] lg:gap-8">
           <div className="space-y-4">
             <Link href={site.routes.home} className="flex items-center gap-2.5">
-              <span className="flex size-9 items-center justify-center bg-inverse-foreground text-inverse">
+              <span className="flex size-9 items-center justify-center rounded-sm bg-inverse-foreground text-inverse">
                 <LuScissors aria-hidden="true" className="size-5" />
               </span>
               <span className="font-bold tracking-wider uppercase">
@@ -35,7 +35,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={site.labels.instagram}
-                  className="flex size-9 items-center justify-center border border-inverse-foreground/15 text-inverse-foreground transition-colors hover:bg-inverse-foreground/10 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+                  className="flex size-9 items-center justify-center rounded-sm border border-inverse-foreground/15 text-inverse-foreground transition-colors hover:bg-inverse-foreground/10 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
                 >
                   <FaInstagram aria-hidden="true" className="size-4" />
                 </a>
@@ -46,7 +46,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={site.labels.tiktok}
-                  className="flex size-9 items-center justify-center border border-inverse-foreground/15 text-inverse-foreground transition-colors hover:bg-inverse-foreground/10 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+                  className="flex size-9 items-center justify-center rounded-sm border border-inverse-foreground/15 text-inverse-foreground transition-colors hover:bg-inverse-foreground/10 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
                 >
                   <FaTiktok aria-hidden="true" className="size-4" />
                 </a>
@@ -57,7 +57,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={site.labels.youtube}
-                  className="flex size-9 items-center justify-center border border-inverse-foreground/15 text-inverse-foreground transition-colors hover:bg-inverse-foreground/10 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+                  className="flex size-9 items-center justify-center rounded-sm border border-inverse-foreground/15 text-inverse-foreground transition-colors hover:bg-inverse-foreground/10 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
                 >
                   <FaYoutube aria-hidden="true" className="size-4" />
                 </a>
@@ -67,7 +67,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={site.labels.whatsapp}
-                className="flex size-9 items-center justify-center border border-inverse-foreground/15 text-inverse-foreground transition-colors hover:bg-inverse-foreground/10 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+                className="flex size-9 items-center justify-center rounded-sm border border-inverse-foreground/15 text-inverse-foreground transition-colors hover:bg-inverse-foreground/10 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
               >
                 <FaWhatsapp aria-hidden="true" className="size-4" />
               </a>
@@ -92,7 +92,7 @@ export function Footer() {
             </ul>
           </nav>
 
-          <div className="space-y-3">
+          {/* <div className="space-y-3">
             <h2 className="text-sm font-bold tracking-wider uppercase">
               {site.footer.contactTitle}
             </h2>
@@ -140,7 +140,7 @@ export function Footer() {
                 </li>
               ) : null}
             </ul>
-          </div>
+          </div> */}
 
           <div className="space-y-3">
             <h2 className="text-sm font-bold tracking-wider uppercase">

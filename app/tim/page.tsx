@@ -5,7 +5,7 @@ import { PageHeader } from "@/components/layouts/page-header";
 export const metadata: Metadata = {
   title: "Tim & Kapster Profesional",
   description:
-    "Kenali profil kapster Mono Barber dan pilihan layanan grooming.",
+    "Kenali profil kapster Crosscut Barber dan pilihan layanan grooming.",
 };
 
 export default function TeamPage() {
@@ -14,7 +14,7 @@ export default function TeamPage() {
       <PageHeader
         kicker="Master Groomers"
         title="Tim & Kapster Kami"
-        description="Kenali kapster Mono Barber, pengalaman, dan spesialisasi layanan grooming mereka."
+        description="Kenali kapster Crosscut Barber, pengalaman, dan spesialisasi layanan grooming mereka."
         breadcrumbs={[{ label: "Tim" }]}
       />
       <TeamList />

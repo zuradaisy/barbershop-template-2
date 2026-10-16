@@ -1,5 +1,5 @@
 export const bookingContent = {
-  whatsappMessageIntro: "Halo Mono Barber, saya ingin mengajukan booking:",
+  whatsappMessageIntro: "Halo Crosscut Barber, saya ingin mengajukan booking:",
   whatsappMessageOutro:
     "Jadwal ini merupakan preferensi dan menunggu konfirmasi.",
   formEyebrow: "Formulir Reservasi",

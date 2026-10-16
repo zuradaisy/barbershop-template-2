@@ -2,6 +2,7 @@ import type { BadgeVariant } from "@/components/ui/badge";
 import type { ButtonSize, ButtonVariant } from "@/components/ui/button";
 
 export type ColorToken = {
+  group: "Warna inti" | "Warna fungsional";
   name: string;
   className: string;
   usage: string;
@@ -94,86 +95,110 @@ export const designSystem = {
       "Warna hanya berasal dari token di styles/theme.css. Ganti nilai token untuk mengubah brand, bukan class di komponen.",
     tokens: [
       {
+        group: "Warna inti",
         name: "--background",
         className: "bg-background",
         usage: "Latar halaman.",
       },
       {
+        group: "Warna inti",
         name: "--foreground",
         className: "bg-foreground",
         usage: "Teks utama dan elemen gelap.",
       },
       {
+        group: "Warna inti",
         name: "--primary",
         className: "bg-primary",
         usage: "Aksi utama seperti tombol dan tautan penting.",
       },
       {
+        group: "Warna fungsional",
         name: "--primary-foreground",
         className: "bg-primary-foreground",
         usage: "Teks dan ikon di atas warna primary.",
       },
       {
+        group: "Warna inti",
         name: "--muted",
         className: "bg-muted",
         usage: "Latar sekunder, hover, dan kartu.",
       },
       {
+        group: "Warna fungsional",
         name: "--muted-foreground",
         className: "bg-muted-foreground",
         usage: "Teks sekunder dan keterangan.",
       },
       {
+        group: "Warna fungsional",
         name: "--border",
         className: "bg-border",
         usage: "Garis batas dan pemisah.",
       },
       {
+        group: "Warna fungsional",
         name: "--ring",
         className: "bg-ring",
         usage: "Ring fokus untuk navigasi keyboard.",
       },
       {
+        group: "Warna fungsional",
         name: "--destructive",
         className: "bg-destructive",
         usage: "Error validasi dan aksi berbahaya.",
       },
       {
+        group: "Warna inti",
         name: "--accent",
         className: "bg-accent",
-        usage: "Aksen merah untuk label dan sorotan selektif Mono Barber.",
+        usage: "Aksen oranye CROSSCUT BARBER untuk sorotan dan permukaan.",
       },
       {
+        group: "Warna inti",
+        name: "--accent-text",
+        className: "bg-accent-text",
+        usage:
+          "Varian aksen dengan kontras cukup untuk teks kecil di atas latar terang.",
+      },
+      {
+        group: "Warna fungsional",
         name: "--accent-foreground",
         className: "bg-accent-foreground",
         usage: "Teks dan ikon di atas aksen dengan kontras AA.",
       },
       {
+        group: "Warna fungsional",
         name: "--inverse",
         className: "bg-inverse",
         usage: "Latar CTA dan footer yang selalu gelap.",
       },
       {
+        group: "Warna fungsional",
         name: "--inverse-foreground",
         className: "bg-inverse-foreground",
         usage: "Teks dan ikon di atas latar inverse.",
       },
       {
+        group: "Warna fungsional",
         name: "--whatsapp",
         className: "bg-whatsapp",
         usage: "Warna identitas pada tombol WhatsApp.",
       },
       {
+        group: "Warna fungsional",
         name: "--whatsapp-foreground",
         className: "bg-whatsapp-foreground",
         usage: "Ikon dan teks pada tombol WhatsApp.",
       },
       {
+        group: "Warna fungsional",
         name: "--hero-scrim",
         className: "bg-hero-scrim",
         usage: "Lapisan gelap untuk menjaga keterbacaan teks pada foto hero.",
       },
       {
+        group: "Warna fungsional",
         name: "--hero-foreground",
         className: "bg-hero-foreground",
         usage: "Teks pada hero foto yang memakai lapisan gelap.",
@@ -190,18 +215,19 @@ export const designSystem = {
     title: "Tipografi",
     scaleTitle: "Skala teks",
     description:
-      "Manrope 400/700 dipakai untuk isi dan UI. Oswald 700 dipakai untuk judul editorial; heading membesar bertahap dari section ke halaman dan hero.",
+      "Manrope 400/600/700 dipakai untuk isi dan UI. Oswald 700 dipakai untuk judul editorial; heading membesar bertahap dari section ke halaman dan hero.",
     samples: [
       {
         name: "Display",
         className:
-          "font-display text-5xl leading-none font-bold tracking-tight sm:text-7xl",
+          "font-display text-4xl leading-none font-bold tracking-tight sm:text-6xl lg:text-7xl",
         sample: "Judul utama halaman.",
         usage: "Satu per halaman, dipakai di hero.",
       },
       {
         name: "Judul section",
-        className: "font-display text-3xl leading-tight font-bold sm:text-5xl",
+        className:
+          "font-display text-[32px] leading-tight font-bold sm:text-[40px]",
         sample: "Judul bagian konten.",
         usage: "Pembuka setiap section.",
       },
@@ -213,15 +239,21 @@ export const designSystem = {
       },
       {
         name: "Isi",
-        className: "text-base leading-7",
+        className: "text-base leading-relaxed font-normal",
         sample: "Paragraf untuk penjelasan panjang.",
         usage: "Teks isi utama.",
       },
       {
+        name: "Harga layanan",
+        className: "text-base font-semibold",
+        sample: "Rp 85.000",
+        usage: "Informasi harga yang perlu mudah ditemukan.",
+      },
+      {
         name: "Keterangan",
-        className: "text-sm text-muted-foreground",
+        className: "text-sm font-normal text-muted-foreground",
         sample: "Catatan pendukung yang lebih kecil.",
-        usage: "Teks sekunder dan bantuan.",
+        usage: "Durasi layanan dan informasi sekunder.",
       },
     ] satisfies TypeSample[],
   },
@@ -230,12 +262,12 @@ export const designSystem = {
     sample: "Contoh tampilan font proyek.",
     current: "--font-display untuk heading · --font-sans untuk isi/UI",
     description:
-      "Oswald 700 memberi heading yang padat dan tegas. Manrope 400/700 menjaga isi dan kontrol tetap bersih dan mudah dibaca. Keduanya dimuat lewat next/font dan dipetakan ke token proyek.",
+      "Oswald 700 memberi heading yang padat dan tegas. Manrope 400/600/700 menjaga isi dan kontrol tetap bersih dan mudah dibaca. Hero memakai 36/60/72px, heading section 32/40px, judul layanan 18px, dan teks isi 16px.",
   },
   radius: {
     title: "Radius",
     description:
-      "Panel dan kartu memakai rounded-sm (6px), kontrol memakai rounded-md (8px), dan gambar memakai rounded-md (8px). Potret tim tetap bulat sebagai treatment khusus.",
+      "Radius bertingkat dari satu token dasar: small mengurangi 2px, medium memakai nilai dasar, dan large menambah 4px. Potret tim tetap bulat sebagai treatment khusus.",
     tokens: [
       {
         name: "--radius-sm",
@@ -246,6 +278,11 @@ export const designSystem = {
         name: "--radius-md",
         className: "rounded-md",
         usage: "Tombol dan kontrol; sudut gambar layanan, galeri, dan About.",
+      },
+      {
+        name: "--radius-lg",
+        className: "rounded-lg",
+        usage: "Panel yang perlu penekanan lebih besar.",
       },
       {
         name: "rounded-full",
@@ -259,14 +296,14 @@ export const designSystem = {
     description:
       "Section dan Container mengatur ritme serta lebar halaman. SectionHeading memakai label kecil dan judul yang konsisten; deskripsi tersedia untuk halaman yang memerlukannya.",
     tokens: [
-      { name: "Section", usage: "py-14 sm:py-16 lg:py-20" },
+      { name: "Section", usage: "py-16 lg:py-20 (64px / 80px)" },
       {
         name: "Container",
         usage: "max-w-6xl · 2xl:max-w-7xl · px-4 sm:px-6 lg:px-8",
       },
       {
         name: "SectionHeading",
-        usage: "Label netral di atas judul; deskripsi opsional.",
+        usage: "Kicker kecil di atas judul 32px / 40px.",
       },
     ] satisfies LayoutTokenInfo[],
   },
@@ -302,12 +339,16 @@ export const designSystem = {
       },
     ] satisfies ButtonVariantInfo[],
     sizes: [
-      { size: "sm", label: "Kecil (sm)", usage: "Untuk area rapat." },
-      { size: "md", label: "Sedang (md)", usage: "Ukuran default." },
-      { size: "lg", label: "Besar (lg)", usage: "Untuk CTA utama." },
+      { size: "sm", label: "Kecil (sm)", usage: "36px tinggi, teks 14px." },
+      { size: "md", label: "Sedang (md)", usage: "40px tinggi, teks 14px." },
+      {
+        size: "lg",
+        label: "Besar (lg)",
+        usage: "48px tinggi, teks 16px semibold; untuk Booking.",
+      },
     ] satisfies ButtonSizeInfo[],
     linkNote:
-      "Tautan yang terlihat seperti tombol memakai buttonStyles() agar gayanya identik dengan Button.",
+      "Tautan yang terlihat seperti tombol memakai buttonStyles(). Link Lihat Semua memakai teks 16px regular dan satu ikon panah.",
   },
   badges: {
     title: "Badge",
@@ -363,15 +404,20 @@ export const designSystem = {
   cards: {
     title: "Card",
     description:
-      "Card adalah panel informasi sederhana: latar netral, border tipis, radius kecil, dan padding ringkas. Kartu interaktif boleh menguatkan border saat hover; blur hanya untuk kontrol yang menumpang di atas foto.",
+      "Card memakai latar netral, border tipis, radius kecil, dan shadow-panel yang halus. Kartu interaktif boleh menguatkan border saat hover; blur hanya untuk kontrol yang menumpang di atas foto.",
     contentCard: {
       title: "ContentCard",
       description:
-        "Varian layanan dan tim memakai panel abu dengan border tipis dan radius sm. Hover mencerahkan panel dan memberi aksen merah pada judul; foto tetap bersudut tajam. Label radius sm, tombol hitam tanpa garis pemisah internal.",
+        "Varian layanan dan tim memakai panel netral, border tipis, radius sm, dan shadow-panel halus. Hover memberi aksen oranye pada judul; nomor layanan memakai abu-abu.",
       rowLabel: "Varian baris",
       cardLabel: "Varian kartu",
     },
     components: [
+      {
+        name: "shadow-panel",
+        usage:
+          "Bayangan halus pada kartu dan form, dengan nilai berbeda di dark mode.",
+      },
       {
         name: "photo-mono",
         usage: "Treatment grayscale dan kontras untuk foto hero sinematik.",

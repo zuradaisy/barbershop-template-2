@@ -7,7 +7,7 @@ import { PageHeader } from "@/components/layouts/page-header";
 export const metadata: Metadata = {
   title: "Galeri & Hasil Potong",
   description:
-    "Galeri transformasi before & after gaya rambut dan grooming Mono Barber Jakarta Selatan.",
+    "Galeri transformasi before & after gaya rambut dan grooming Crosscut Barber Jakarta Selatan.",
 };
 
 export default function GalleryPage() {
@@ -16,7 +16,7 @@ export default function GalleryPage() {
       <PageHeader
         kicker="Portfolio & Dokumentasi"
         title="Galeri & Hasil Kerja"
-        description="Jelajahi hasil potongan dan grooming Mono Barber berdasarkan kategori layanan."
+        description="Jelajahi hasil potongan dan grooming Crosscut Barber berdasarkan kategori layanan."
         breadcrumbs={[{ label: "Galeri" }]}
       />
       <Section className="py-12 sm:py-16">

@@ -6,7 +6,7 @@ import { bookingContent } from "@/content/booking";
 export const metadata: Metadata = {
   title: "Booking Jadwal Online",
   description:
-    "Ajukan preferensi layanan dan jadwal grooming Mono Barber melalui WhatsApp.",
+    "Ajukan preferensi layanan dan jadwal grooming Crosscut Barber melalui WhatsApp.",
 };
 
 type Props = {

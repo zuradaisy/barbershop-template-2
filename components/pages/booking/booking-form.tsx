@@ -89,7 +89,7 @@ export function BookingForm({
           <Card className="p-5 sm:p-6">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="border-b border-border pb-5">
-                <span className="text-xs font-bold tracking-widest text-accent uppercase">
+                <span className="text-xs font-bold tracking-widest text-accent-text uppercase">
                   {bookingContent.formEyebrow}
                 </span>
                 <h2 className="mt-2 font-display text-3xl leading-tight font-bold tracking-tight uppercase sm:text-4xl">

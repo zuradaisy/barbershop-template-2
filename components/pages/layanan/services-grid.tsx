@@ -27,7 +27,7 @@ export function ServicesGrid() {
             type="button"
             onClick={() => setActiveCategory("all")}
             className={cn(
-              "px-3.5 py-1.5 text-xs font-bold uppercase transition-colors",
+              "rounded-sm px-3.5 py-1.5 text-xs font-bold uppercase transition-colors",
               activeCategory === "all"
                 ? "bg-primary text-primary-foreground"
                 : "border border-border bg-background text-muted-foreground hover:bg-muted hover:text-foreground",
@@ -41,7 +41,7 @@ export function ServicesGrid() {
               type="button"
               onClick={() => setActiveCategory(cat.key)}
               className={cn(
-                "px-3.5 py-1.5 text-xs font-bold uppercase transition-colors",
+                "rounded-sm px-3.5 py-1.5 text-xs font-bold uppercase transition-colors",
                 activeCategory === cat.key
                   ? "bg-primary text-primary-foreground"
                   : "border border-border bg-background text-muted-foreground hover:bg-muted hover:text-foreground",

@@ -10,6 +10,7 @@ import { Container } from "@/components/ui/container";
 import { Field } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { Select } from "@/components/ui/select";
+import { SectionHeading } from "@/components/ui/section-heading";
 import { home } from "@/content/home";
 import { services } from "@/content/services";
 import { whatsappLink } from "@/lib/links";
@@ -55,11 +56,16 @@ export function QuickBookingForm() {
     <Section
       id="booking-form"
       aria-label={copy.accessibleSectionLabel}
-      className="bg-muted/40 py-8 sm:py-10"
+      className="bg-background"
     >
       <Container>
         <Card className="p-5 sm:p-6">
-          <p className="text-base leading-relaxed text-muted-foreground">
+          <SectionHeading
+            kicker={copy.kicker}
+            title={copy.title}
+            className="mb-5"
+          />
+          <p className="mb-5 text-base leading-relaxed text-muted-foreground">
             {copy.descriptionFor(selectedService.name)}
           </p>
           <form
@@ -123,7 +129,7 @@ export function QuickBookingForm() {
               />
             </Field>
             <div className="sm:col-span-2">
-              <Button type="submit" size="md" className="w-full justify-center">
+              <Button type="submit" size="lg" className="w-full justify-center">
                 <FaWhatsapp aria-hidden="true" className="size-4" />
                 {copy.submitLabel}
               </Button>
