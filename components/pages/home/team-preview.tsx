@@ -40,7 +40,7 @@ export function TeamPreview() {
                 </span>
               </Link>
               <figcaption className="mt-5">
-                <h3 className="text-sm font-bold uppercase">{barber.name}</h3>
+                <h3 className="text-base font-bold uppercase">{barber.name}</h3>
                 <p className="mt-1 text-sm text-muted-foreground">
                   {barber.role}
                 </p>

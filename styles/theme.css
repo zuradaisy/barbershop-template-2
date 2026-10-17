@@ -1,24 +1,23 @@
 :root {
   --background: #ffffff;
   --foreground: #09090b;
-  --primary: #09090b;
-  --primary-foreground: #ffffff;
+  --primary: var(--foreground);
+  --primary-foreground: var(--background);
   --muted: #f4f4f5;
   --muted-foreground: #71717a;
   --border: #e4e4e7;
-  --ring: #09090b;
+  --ring: var(--foreground);
   --destructive: #dc2626;
   --radius: 0.5rem;
-  --panel-shadow: 0 2px 12px rgb(9 9 11 / 0.06);
-  --accent: #f15025;
-  --accent-text: #c43e19;
-  --accent-foreground: #09090b;
+  --panel-shadow: 0 1px 4px rgb(9 9 11 / 0.04);
+  --accent: #ba2d0b;
+  --accent-foreground: #ffffff;
   --whatsapp: #25d366;
   --whatsapp-foreground: #052e16;
   --hero-scrim: #09090b;
   --hero-foreground: #ffffff;
-  --inverse: #09090b;
-  --inverse-foreground: #fafafa;
+  --inverse: var(--foreground);
+  --inverse-foreground: var(--background);
   --font-body: var(--font-manrope), sans-serif;
   --font-display-family: var(--font-oswald), sans-serif;
 }
@@ -26,23 +25,22 @@
 .dark {
   --background: #09090b;
   --foreground: #f4f4f5;
-  --primary: #f4f4f5;
-  --primary-foreground: #09090b;
+  --primary: var(--foreground);
+  --primary-foreground: var(--background);
   --muted: #18181b;
   --muted-foreground: #a1a1aa;
   --border: #27272a;
-  --ring: #f4f4f5;
+  --ring: var(--foreground);
   --destructive: #ef4444;
-  --panel-shadow: 0 2px 12px rgb(0 0 0 / 0.28);
-  --accent: #f15025;
-  --accent-text: #f15025;
+  --panel-shadow: 0 1px 4px rgb(0 0 0 / 0.16);
+  --accent: #f28c78;
   --accent-foreground: #09090b;
   --whatsapp: #25d366;
   --whatsapp-foreground: #052e16;
   --hero-scrim: #09090b;
   --hero-foreground: #ffffff;
-  --inverse: #18181b;
-  --inverse-foreground: #f4f4f5;
+  --inverse: var(--foreground);
+  --inverse-foreground: var(--background);
   --font-body: var(--font-manrope), sans-serif;
   --font-display-family: var(--font-oswald), sans-serif;
 }
@@ -58,7 +56,6 @@
   --color-ring: var(--ring);
   --color-destructive: var(--destructive);
   --color-accent: var(--accent);
-  --color-accent-text: var(--accent-text);
   --color-accent-foreground: var(--accent-foreground);
   --color-whatsapp: var(--whatsapp);
   --color-whatsapp-foreground: var(--whatsapp-foreground);

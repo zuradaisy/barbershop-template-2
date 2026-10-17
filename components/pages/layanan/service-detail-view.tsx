@@ -92,7 +92,7 @@ export function ServiceDetailView({ service }: { service: Service }) {
                       key={step}
                       className="flex items-start gap-3 border-b border-border py-3 text-base"
                     >
-                      <span className="font-bold text-accent-text">
+                      <span className="font-bold text-accent">
                         {String(index + 1).padStart(2, "0")}
                       </span>
                       <span>{step}</span>
@@ -128,7 +128,7 @@ export function ServiceDetailView({ service }: { service: Service }) {
             <div className="space-y-4 sm:sticky sm:top-24">
               <Card className="space-y-6 p-5 sm:p-6">
                 <div>
-                  <span className="text-xs font-bold text-accent-text uppercase">
+                  <span className="text-xs font-bold text-accent uppercase">
                     {serviceUi.reservationEyebrow}
                   </span>
                   <h2 className="mt-1 text-xl font-bold uppercase">
@@ -138,7 +138,7 @@ export function ServiceDetailView({ service }: { service: Service }) {
                     {serviceUi.reservationDescription}
                   </p>
                 </div>
-                <dl className="space-y-3 border-y border-border py-4 text-sm">
+                <dl className="space-y-3 border-y border-border py-4 text-base">
                   <div className="flex justify-between gap-4">
                     <dt className="text-muted-foreground">
                       {serviceUi.serviceLabel}
@@ -204,7 +204,7 @@ export function ServiceDetailView({ service }: { service: Service }) {
                   );
                 })}
               </ul>
-              <p className="flex items-start gap-2 px-1 text-sm leading-relaxed text-muted-foreground">
+              <p className="flex items-start gap-2 px-1 text-base leading-relaxed text-muted-foreground">
                 <LuShieldCheck
                   aria-hidden="true"
                   className="mt-0.5 size-4 shrink-0"

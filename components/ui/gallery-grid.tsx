@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { buttonStyles } from "@/components/ui/button";
 import { GalleryCard } from "@/components/ui/gallery-card";
 import {
   beforeAfterCategoryFilters,
@@ -8,7 +9,6 @@ import {
   beforeAfterUi,
   type BeforeAfterCategory,
 } from "@/content/gallery";
-import { cn } from "@/lib/utils";
 
 export type GalleryGridProps = {
   items?: typeof beforeAfterItems;
@@ -36,7 +36,7 @@ export function GalleryGrid({
     <div>
       {showFilters ? (
         <div
-          className="mb-8 flex flex-wrap gap-2"
+          className="mb-8 flex flex-wrap gap-2 border-b border-border/80 pb-6"
           role="group"
           aria-label={beforeAfterUi.categoriesLabel}
         >
@@ -44,12 +44,11 @@ export function GalleryGrid({
             type="button"
             onClick={() => setActiveCategory("all")}
             aria-pressed={activeCategory === "all"}
-            className={cn(
-              "px-3 py-2 text-xs font-bold uppercase transition-colors",
-              activeCategory === "all"
-                ? "bg-primary text-primary-foreground"
-                : "border border-border text-muted-foreground hover:text-foreground",
-            )}
+            className={buttonStyles({
+              variant: activeCategory === "all" ? "primary" : "outline",
+              size: "sm",
+              className: "rounded-sm font-semibold uppercase",
+            })}
           >
             {beforeAfterUi.allCategoriesLabel}
           </button>
@@ -59,12 +58,12 @@ export function GalleryGrid({
               type="button"
               onClick={() => setActiveCategory(category.key)}
               aria-pressed={activeCategory === category.key}
-              className={cn(
-                "px-3 py-2 text-xs font-bold uppercase transition-colors",
-                activeCategory === category.key
-                  ? "bg-primary text-primary-foreground"
-                  : "border border-border text-muted-foreground hover:text-foreground",
-              )}
+              className={buttonStyles({
+                variant:
+                  activeCategory === category.key ? "primary" : "outline",
+                size: "sm",
+                className: "rounded-sm font-semibold uppercase",
+              })}
             >
               {category.label}
             </button>

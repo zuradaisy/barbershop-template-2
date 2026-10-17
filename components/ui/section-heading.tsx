@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { LuArrowRight } from "react-icons/lu";
+import { buttonStyles } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 export type SectionHeadingProps = {
@@ -32,7 +33,7 @@ export function SectionHeading({
     >
       <div className={cn("space-y-2", align === "center" && "max-w-2xl")}>
         {kicker && (
-          <span className="text-xs font-bold tracking-widest text-accent-text uppercase">
+          <span className="text-xs font-bold tracking-widest text-accent uppercase">
             {kicker}
           </span>
         )}
@@ -49,7 +50,12 @@ export function SectionHeading({
       {actionLink && (
         <Link
           href={actionLink.href}
-          className="group inline-flex items-center gap-2 text-base font-normal text-muted-foreground transition-colors hover:text-foreground"
+          className={buttonStyles({
+            variant: "ghost",
+            size: "md",
+            className:
+              "group h-auto gap-2 px-0 py-0 text-base font-normal text-muted-foreground hover:text-accent",
+          })}
         >
           <span>{actionLink.label}</span>
           <LuArrowRight className="size-4" />

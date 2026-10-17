@@ -86,10 +86,10 @@ export function BookingForm({
     <div className="py-12 sm:py-16">
       <Container>
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(18rem,0.8fr)] lg:gap-14">
-          <Card className="p-5 sm:p-6">
+          <Card className="bg-muted/60 p-5 sm:p-6">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="border-b border-border pb-5">
-                <span className="text-xs font-bold tracking-widest text-accent-text uppercase">
+                <span className="text-xs font-bold tracking-widest text-accent uppercase">
                   {bookingContent.formEyebrow}
                 </span>
                 <h2 className="mt-2 font-display text-3xl leading-tight font-bold tracking-tight uppercase sm:text-4xl">
@@ -215,7 +215,7 @@ export function BookingForm({
                 <LuScissors aria-hidden="true" className="size-4" />
                 <h2 className="font-bold uppercase">{summary.title}</h2>
               </div>
-              <dl className="mt-4 space-y-3 text-sm">
+              <dl className="mt-4 space-y-3 text-base">
                 <div className="flex justify-between gap-4">
                   <dt className="text-muted-foreground">
                     {summary.serviceLabel}
@@ -258,7 +258,7 @@ export function BookingForm({
                       className="mt-0.5 size-4 shrink-0 text-accent"
                     />
                     <div>
-                      <h3 className="text-sm font-semibold">{item.title}</h3>
+                      <h3 className="text-base font-semibold">{item.title}</h3>
                       <p className="mt-0.5 text-base leading-relaxed text-muted-foreground">
                         {item.description}
                       </p>

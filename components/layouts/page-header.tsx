@@ -57,7 +57,7 @@ export function PageHeader({
 
         <div className="max-w-3xl space-y-3">
           {kicker && (
-            <span className="text-xs font-bold tracking-widest text-accent-text uppercase">
+            <span className="text-xs font-bold tracking-widest text-accent uppercase">
               {kicker}
             </span>
           )}

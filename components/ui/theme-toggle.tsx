@@ -53,7 +53,7 @@ export function ThemeToggle({ labels, className }: ThemeToggleProps) {
       onClick={toggleTheme}
       aria-label={isDark ? labels.toLight : labels.toDark}
       className={cn(
-        "inline-flex size-10 items-center justify-center rounded-md text-foreground transition-colors hover:bg-muted focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none",
+        "inline-flex size-10 items-center justify-center rounded-md text-foreground transition-colors hover:text-accent focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none",
         className,
       )}
     >

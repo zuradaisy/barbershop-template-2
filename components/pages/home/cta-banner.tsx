@@ -8,7 +8,7 @@ export function CtaBanner() {
   const { ctaBanner } = home;
 
   return (
-    <section className="bg-inverse py-16 text-inverse-foreground lg:py-20">
+    <section className="bg-inverse py-20 text-inverse-foreground lg:py-24">
       <Container>
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
           <div className="space-y-1">

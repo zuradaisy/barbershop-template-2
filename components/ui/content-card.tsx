@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { Badge } from "@/components/ui/badge";
 import { buttonStyles } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { LuArrowRight } from "react-icons/lu";
 import { cn } from "@/lib/utils";
 
@@ -16,7 +18,6 @@ export type ContentCardAction = {
 export type ContentCardAspect = "video" | "portrait";
 
 export type ContentCardProps = {
-  variant?: "default" | "service" | "profile" | "row";
   aspect?: ContentCardAspect;
   title: string;
   href?: string;
@@ -25,7 +26,6 @@ export type ContentCardProps = {
   metaIcon?: ReactNode;
   description?: string;
   price?: string;
-  number?: string;
   image?: { src: string; alt: string };
   imageBadge?: string;
   tags?: string[];
@@ -34,7 +34,6 @@ export type ContentCardProps = {
 };
 
 export function ContentCard({
-  variant = "default",
   aspect = "video",
   title,
   href,
@@ -43,79 +42,21 @@ export function ContentCard({
   metaIcon,
   description,
   price,
-  number,
   image,
   imageBadge,
   tags = [],
   actions = [],
   className,
 }: ContentCardProps) {
-  const isCatalogCard = variant === "service" || variant === "profile";
-  const titleContent = href ? (
-    <Link
-      href={href}
-      className={
-        isCatalogCard
-          ? "transition-colors group-hover/card:text-accent-text"
-          : ""
-      }
-    >
-      {title}
-    </Link>
-  ) : (
-    title
-  );
-
-  if (variant === "row") {
-    return (
-      <article
-        className={cn(
-          "group/row -mx-3 rounded-sm border border-transparent px-3 py-5 transition-colors duration-150 focus-within:border-accent/40 focus-within:bg-muted/40 focus-within:shadow-panel hover:border-accent/40 hover:bg-muted/40 hover:shadow-panel",
-          className,
-        )}
-      >
-        <div className="flex min-w-0 items-baseline gap-3 sm:gap-5">
-          {number ? (
-            <span className="w-10 shrink-0 font-display text-3xl leading-none font-bold text-muted-foreground sm:w-14 sm:text-5xl">
-              {number}
-            </span>
-          ) : null}
-          <div className="flex min-w-0 flex-1 items-baseline gap-2 sm:gap-3">
-            <h3 className="min-w-0 text-lg font-bold uppercase">
-              {titleContent}
-            </h3>
-            {price ? (
-              <span
-                aria-hidden="true"
-                className="mb-1.5 hidden min-w-4 flex-1 border-b border-dotted border-muted-foreground/50 sm:block"
-              />
-            ) : null}
-          </div>
-          {price ? (
-            <span className="shrink-0 text-base font-semibold">{price}</span>
-          ) : null}
-        </div>
-        <div className="mt-1 flex flex-col justify-between gap-1 text-base text-muted-foreground sm:flex-row sm:items-start sm:gap-4">
-          {description ? <p className="max-w-2xl">{description}</p> : null}
-          {meta ? <p className="shrink-0 text-sm">{meta}</p> : null}
-        </div>
-        {eyebrow ? (
-          <span className="mt-2 inline-block text-xs font-semibold text-accent-text">
-            {eyebrow}
-          </span>
-        ) : null}
-      </article>
-    );
-  }
+  const isInteractive = Boolean(href || actions.length > 0);
 
   return (
-    <article
+    <Card
       className={cn(
-        "group/card relative flex h-full flex-col overflow-hidden rounded-sm border shadow-panel transition-colors duration-150",
-        isCatalogCard
-          ? "border-border bg-muted/40 hover:border-muted-foreground/40 hover:bg-background"
-          : "border-transparent bg-background",
-        !isCatalogCard && (href || actions.length > 0) && "hover:border-border",
+        "group/card relative flex flex-col overflow-hidden bg-background p-0 transition-colors duration-150",
+        image ? "h-full" : "h-fit self-start",
+        href && "cursor-pointer",
+        isInteractive && "hover:border-muted-foreground/40 hover:bg-muted/60",
         className,
       )}
     >
@@ -142,20 +83,37 @@ export function ContentCard({
           />
           <div className="absolute top-2 left-2 flex flex-wrap gap-1.5">
             {eyebrow ? (
-              <span className="rounded-sm bg-primary px-2 py-1 text-[10px] font-bold text-primary-foreground uppercase">
+              <Badge
+                variant="primary"
+                className="rounded-sm px-2 py-1 text-[10px] font-bold uppercase"
+              >
                 {eyebrow}
-              </span>
+              </Badge>
             ) : null}
             {imageBadge ? (
-              <span className="rounded-sm bg-accent px-2 py-1 text-[10px] font-bold text-accent-foreground uppercase">
+              <Badge
+                variant="primary"
+                className="rounded-sm px-2 py-1 text-[10px] font-bold uppercase"
+              >
                 {imageBadge}
-              </span>
+              </Badge>
             ) : null}
           </div>
         </div>
       ) : null}
 
-      <div className="flex flex-1 flex-col gap-3 p-5 sm:p-6">
+      <div
+        className={cn(
+          "flex flex-col gap-3 p-6 sm:p-8",
+          image && "flex-1",
+          actions.length > 0 && "pb-0",
+        )}
+      >
+        {eyebrow && !image ? (
+          <Badge variant="primary" className="self-start">
+            {eyebrow}
+          </Badge>
+        ) : null}
         {meta || price ? (
           <div className="flex flex-wrap items-center justify-between gap-2">
             {meta ? (
@@ -176,11 +134,13 @@ export function ContentCard({
         {tags.length > 0 ? (
           <ul className="mt-1 flex flex-wrap gap-2">
             {tags.map((tag) => (
-              <li
-                key={tag}
-                className="rounded-sm border border-border px-2 py-1 text-xs text-muted-foreground"
-              >
-                {tag}
+              <li key={tag}>
+                <Badge
+                  variant="outline"
+                  className="rounded-sm px-2 py-1 text-xs text-muted-foreground"
+                >
+                  {tag}
+                </Badge>
               </li>
             ))}
           </ul>
@@ -188,13 +148,12 @@ export function ContentCard({
       </div>
 
       {actions.length > 0 ? (
-        <div className="mt-auto flex gap-2 p-5 pt-0 sm:p-6 sm:pt-0">
+        <div className={cn("flex gap-2 p-6 pt-6 sm:p-8", image && "mt-auto")}>
           {actions.map((action) => {
             const className = buttonStyles({
               variant: action.variant ?? "primary",
               size: "lg",
-              className:
-                "relative z-10 w-full bg-inverse text-inverse-foreground text-base font-semibold hover:bg-inverse/90",
+              className: "relative z-10 w-full text-base font-semibold",
             });
 
             return action.external ? (
@@ -223,6 +182,6 @@ export function ContentCard({
           })}
         </div>
       ) : null}
-    </article>
+    </Card>
   );
 }

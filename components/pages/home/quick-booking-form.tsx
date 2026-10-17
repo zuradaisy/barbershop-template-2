@@ -46,7 +46,7 @@ export function QuickBookingForm() {
       `• ${copy.dateLabel}: ${formattedDate}`,
       `• ${copy.timeLabel}: ${time} ${copy.timeZoneLabel}`,
       "",
-      copy.pendingNote,
+      copy.messageOutro,
     ].join("\n");
     window.open(whatsappLink(message), "_blank", "noopener,noreferrer");
     setSubmitted(true);
@@ -59,18 +59,16 @@ export function QuickBookingForm() {
       className="bg-background"
     >
       <Container>
-        <Card className="p-5 sm:p-6">
-          <SectionHeading
-            kicker={copy.kicker}
-            title={copy.title}
-            className="mb-5"
-          />
-          <p className="mb-5 text-base leading-relaxed text-muted-foreground">
-            {copy.descriptionFor(selectedService.name)}
-          </p>
+        <Card className="bg-muted/60 p-5 sm:p-6 lg:grid lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:items-center lg:gap-10 lg:p-8">
+          <div className="mb-6 lg:mb-0">
+            <SectionHeading kicker={copy.kicker} title={copy.title} />
+            <p className="mt-4 max-w-prose text-base leading-relaxed text-muted-foreground">
+              {copy.description}
+            </p>
+          </div>
           <form
             onSubmit={handleSubmit}
-            className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2"
+            className="grid grid-cols-1 gap-x-4 gap-y-5 sm:grid-cols-2"
           >
             <Field id={nameId} label={copy.nameLabel}>
               <Input
@@ -78,6 +76,18 @@ export function QuickBookingForm() {
                 autoComplete="name"
                 value={name}
                 onChange={(event) => setName(event.target.value)}
+                required
+              />
+            </Field>
+            <Field id={phoneId} label={copy.phoneLabel}>
+              <Input
+                id={phoneId}
+                type="tel"
+                autoComplete="tel"
+                pattern="[0-9+() -]{8,20}"
+                title={copy.phoneValidation}
+                value={phone}
+                onChange={(event) => setPhone(event.target.value)}
                 required
               />
             </Field>
@@ -97,18 +107,6 @@ export function QuickBookingForm() {
                   </option>
                 ))}
               </Select>
-            </Field>
-            <Field id={phoneId} label={copy.phoneLabel}>
-              <Input
-                id={phoneId}
-                type="tel"
-                autoComplete="tel"
-                pattern="[0-9+() -]{8,20}"
-                title={copy.phoneValidation}
-                value={phone}
-                onChange={(event) => setPhone(event.target.value)}
-                required
-              />
             </Field>
             <Field id={dateId} label={copy.dateLabel}>
               <Input
@@ -142,9 +140,6 @@ export function QuickBookingForm() {
                 {copy.successMessage}
               </p>
             ) : null}
-            <p className="text-sm leading-relaxed text-muted-foreground sm:col-span-2">
-              {copy.pendingNote}
-            </p>
           </form>
         </Card>
       </Container>

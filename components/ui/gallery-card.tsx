@@ -26,7 +26,7 @@ export function GalleryCard({
 
   return (
     <article className={cn("group", className)}>
-      <div className="relative aspect-[4/5] overflow-hidden rounded-md bg-muted">
+      <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-muted">
         <Image
           src={currentImage}
           alt={item.title}
@@ -35,7 +35,7 @@ export function GalleryCard({
           className="object-cover"
         />
         {item.beforeImage ? (
-          <div className="absolute top-3 left-3 inline-flex overflow-hidden border border-background/70 bg-background/90 p-0.5">
+          <div className="absolute top-3 left-3 inline-flex overflow-hidden rounded-sm border border-background/70 bg-background/90 p-0.5">
             {(["before", "after"] as const).map((option) => (
               <button
                 key={option}
@@ -43,7 +43,7 @@ export function GalleryCard({
                 onClick={() => setView(option)}
                 aria-pressed={view === option}
                 className={cn(
-                  "px-3 py-1.5 text-xs font-bold uppercase",
+                  "rounded-sm px-3 py-1.5 text-xs font-bold uppercase",
                   view === option
                     ? "bg-foreground text-background"
                     : "text-muted-foreground hover:text-foreground",
@@ -58,7 +58,7 @@ export function GalleryCard({
         ) : null}
       </div>
       {showTitle && item.title ? (
-        <h3 className="mt-3 text-sm font-semibold tracking-wide uppercase">
+        <h3 className="mt-3 text-base font-semibold tracking-wide uppercase">
           {item.title}
         </h3>
       ) : null}

@@ -2,7 +2,7 @@ import type { BadgeVariant } from "@/components/ui/badge";
 import type { ButtonSize, ButtonVariant } from "@/components/ui/button";
 
 export type ColorToken = {
-  group: "Warna inti" | "Warna fungsional";
+  group: "Palet inti" | "Token fungsional";
   name: string;
   className: string;
   usage: string;
@@ -57,11 +57,6 @@ export type FormFieldInfo = {
   error?: string;
 };
 
-export type SelectFieldInfo = {
-  label: string;
-  options: string[];
-};
-
 export type CardExampleInfo = {
   badge: string;
   title: string;
@@ -70,6 +65,11 @@ export type CardExampleInfo = {
     label: string;
     href: string;
   };
+};
+
+export type SelectFieldInfo = {
+  label: string;
+  options: string[];
 };
 
 export type LayoutTokenInfo = {
@@ -92,113 +92,107 @@ export const designSystem = {
   colors: {
     title: "Warna",
     description:
-      "Warna hanya berasal dari token di styles/theme.css. Ganti nilai token untuk mengubah brand, bukan class di komponen.",
+      "Palet inti memakai enam warna yang sama di seluruh UI. Token fungsional dipakai hanya untuk kebutuhan khusus; mode gelap menyesuaikan nilai token yang sama agar tetap terbaca.",
     tokens: [
       {
-        group: "Warna inti",
+        group: "Palet inti",
         name: "--background",
         className: "bg-background",
         usage: "Latar halaman.",
       },
       {
-        group: "Warna inti",
+        group: "Palet inti",
         name: "--foreground",
         className: "bg-foreground",
         usage: "Teks utama dan elemen gelap.",
       },
       {
-        group: "Warna inti",
+        group: "Token fungsional",
         name: "--primary",
         className: "bg-primary",
         usage: "Aksi utama seperti tombol dan tautan penting.",
       },
       {
-        group: "Warna fungsional",
+        group: "Token fungsional",
         name: "--primary-foreground",
         className: "bg-primary-foreground",
         usage: "Teks dan ikon di atas warna primary.",
       },
       {
-        group: "Warna inti",
+        group: "Palet inti",
         name: "--muted",
         className: "bg-muted",
         usage: "Latar sekunder, hover, dan kartu.",
       },
       {
-        group: "Warna fungsional",
+        group: "Palet inti",
         name: "--muted-foreground",
         className: "bg-muted-foreground",
         usage: "Teks sekunder dan keterangan.",
       },
       {
-        group: "Warna fungsional",
+        group: "Palet inti",
         name: "--border",
         className: "bg-border",
         usage: "Garis batas dan pemisah.",
       },
       {
-        group: "Warna fungsional",
+        group: "Token fungsional",
         name: "--ring",
         className: "bg-ring",
         usage: "Ring fokus untuk navigasi keyboard.",
       },
       {
-        group: "Warna fungsional",
+        group: "Token fungsional",
         name: "--destructive",
         className: "bg-destructive",
         usage: "Error validasi dan aksi berbahaya.",
       },
       {
-        group: "Warna inti",
+        group: "Palet inti",
         name: "--accent",
         className: "bg-accent",
-        usage: "Aksen oranye CROSSCUT BARBER untuk sorotan dan permukaan.",
-      },
-      {
-        group: "Warna inti",
-        name: "--accent-text",
-        className: "bg-accent-text",
         usage:
-          "Varian aksen dengan kontras cukup untuk teks kecil di atas latar terang.",
+          "Aksen merah bata CROSSCUT BARBER (#ba2d0b); di tema gelap nilainya dibuat lebih terang agar tetap kontras. Berbeda dari token destructive untuk error.",
       },
       {
-        group: "Warna fungsional",
+        group: "Token fungsional",
         name: "--accent-foreground",
         className: "bg-accent-foreground",
         usage: "Teks dan ikon di atas aksen dengan kontras AA.",
       },
       {
-        group: "Warna fungsional",
+        group: "Token fungsional",
         name: "--inverse",
         className: "bg-inverse",
-        usage: "Latar CTA dan footer yang selalu gelap.",
+        usage: "Permukaan invers untuk CTA dan footer; mengikuti tema aktif.",
       },
       {
-        group: "Warna fungsional",
+        group: "Token fungsional",
         name: "--inverse-foreground",
         className: "bg-inverse-foreground",
         usage: "Teks dan ikon di atas latar inverse.",
       },
       {
-        group: "Warna fungsional",
+        group: "Token fungsional",
         name: "--whatsapp",
         className: "bg-whatsapp",
         usage: "Warna identitas pada tombol WhatsApp.",
       },
       {
-        group: "Warna fungsional",
+        group: "Token fungsional",
         name: "--whatsapp-foreground",
         className: "bg-whatsapp-foreground",
         usage: "Ikon dan teks pada tombol WhatsApp.",
       },
       {
-        group: "Warna fungsional",
+        group: "Token fungsional",
         name: "--hero-scrim",
         className: "bg-hero-scrim",
         usage: "Lapisan gelap untuk menjaga keterbacaan teks pada foto hero.",
       },
       {
-        group: "Warna fungsional",
+        group: "Token fungsional",
         name: "--hero-foreground",
         className: "bg-hero-foreground",
         usage: "Teks pada hero foto yang memakai lapisan gelap.",
@@ -220,7 +214,7 @@ export const designSystem = {
       {
         name: "Display",
         className:
-          "font-display text-4xl leading-none font-bold tracking-tight sm:text-6xl lg:text-7xl",
+          "font-display text-5xl leading-none font-bold tracking-tight sm:text-7xl lg:text-8xl",
         sample: "Judul utama halaman.",
         usage: "Satu per halaman, dipakai di hero.",
       },
@@ -262,7 +256,7 @@ export const designSystem = {
     sample: "Contoh tampilan font proyek.",
     current: "--font-display untuk heading · --font-sans untuk isi/UI",
     description:
-      "Oswald 700 memberi heading yang padat dan tegas. Manrope 400/600/700 menjaga isi dan kontrol tetap bersih dan mudah dibaca. Hero memakai 36/60/72px, heading section 32/40px, judul layanan 18px, dan teks isi 16px.",
+      "Oswald 700 memberi heading yang padat dan tegas. Manrope 400/600/700 menjaga isi dan kontrol tetap bersih dan mudah dibaca. Hero memakai 48/72/96px, heading section 32/40px, judul kartu 18px, teks isi dan label form 16px, serta helper dan metadata 14px.",
   },
   radius: {
     title: "Radius",
@@ -296,7 +290,7 @@ export const designSystem = {
     description:
       "Section dan Container mengatur ritme serta lebar halaman. SectionHeading memakai label kecil dan judul yang konsisten; deskripsi tersedia untuk halaman yang memerlukannya.",
     tokens: [
-      { name: "Section", usage: "py-16 lg:py-20 (64px / 80px)" },
+      { name: "Section", usage: "py-20 lg:py-24 (80px / 96px)" },
       {
         name: "Container",
         usage: "max-w-6xl · 2xl:max-w-7xl · px-4 sm:px-6 lg:px-8",
@@ -330,7 +324,7 @@ export const designSystem = {
       {
         variant: "ghost",
         label: "Ghost",
-        usage: "Aksi tersier tanpa latar.",
+        usage: "Aksi tersier tanpa latar; hover mengubah warna teks saja.",
       },
       {
         variant: "inverse",
@@ -404,34 +398,45 @@ export const designSystem = {
   cards: {
     title: "Card",
     description:
-      "Card memakai latar netral, border tipis, radius kecil, dan shadow-panel yang halus. Kartu interaktif boleh menguatkan border saat hover; blur hanya untuk kontrol yang menumpang di atas foto.",
+      "Card adalah wadah/panel dasar yang menerima susunan isi sesuai kebutuhan. Komponen Card mengatur permukaan; konten di dalamnya bisa berupa teks, ikon, gambar, detail, atau tombol.",
     contentCard: {
-      title: "ContentCard",
+      title: "Variasi Card · ContentCard",
       description:
-        "Varian layanan dan tim memakai panel netral, border tipis, radius sm, dan shadow-panel halus. Hover memberi aksen oranye pada judul; nomor layanan memakai abu-abu.",
-      rowLabel: "Varian baris",
-      cardLabel: "Varian kartu",
+        "ContentCard adalah susunan Card yang dipakai ulang untuk konten layanan dan profil barber. Komponen ini memakai fondasi gaya Card yang sama; gambar opsional dan area gambar hilang jika tidak diberikan.",
+      cardLabel: "Contoh dengan gambar",
     },
+    list: {
+      title: "List",
+      description:
+        "List adalah pola mandiri, bukan variasi Card. Item sederhana seperti keunggulan (ul) dan tahapan pengerjaan (ol) cukup ditulis langsung. Buat komponen khusus ketika susunan item yang sama dipakai ulang; contoh di bawah memakai baris informasi dengan border panel saat hover.",
+    },
+    notesTitle: "Catatan · bukan variasi card",
+    notesGroups: ["Token visual", "Komponen lain"] as const,
     components: [
       {
+        group: "Token visual",
         name: "shadow-panel",
         usage:
-          "Bayangan halus pada kartu dan form, dengan nilai berbeda di dark mode.",
+          "Bayangan sangat halus pada kartu dan form; permukaan panel memakai muted agar berbeda dari field.",
       },
       {
+        group: "Token visual",
         name: "photo-mono",
         usage: "Treatment grayscale dan kontras untuk foto hero sinematik.",
       },
       {
+        group: "Komponen lain",
         name: "GalleryCard",
         usage: "Toggle tampil hanya jika beforeImage pasangan asli tersedia.",
       },
       {
+        group: "Komponen lain",
         name: "PageHeader",
         usage:
           "Header halaman dengan kicker, judul, deskripsi, dan breadcrumb.",
       },
       {
+        group: "Komponen lain",
         name: "FloatingWa",
         usage: "Tombol WhatsApp hijau berbentuk bulat pada layar mobile.",
       },

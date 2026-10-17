@@ -6,6 +6,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { ContentCard } from "@/components/ui/content-card";
+import { ServiceRow } from "@/components/ui/service-row";
 import { buttonStyles } from "@/components/ui/button";
 import { designSystem } from "@/content/design-system";
 import { services, serviceUi } from "@/content/services";
@@ -34,6 +35,11 @@ export function CardsSection() {
             </Link>
           </div>
         </Card>
+        <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
+          Card dasar adalah wadah/panel, bukan layout konten tertentu. FAQ, jam
+          operasional footer, dan ringkasan harga adalah pemakaian Card dengan
+          susunan isi masing-masing, bukan variasi Card.
+        </p>
 
         <div className="mt-12 space-y-6">
           <div>
@@ -43,35 +49,8 @@ export function CardsSection() {
             </p>
           </div>
 
-          <ul className="grid gap-4 sm:grid-cols-2">
-            {cards.components.map((component) => (
-              <li
-                key={component.name}
-                className="rounded-sm border border-border p-4"
-              >
-                <h4 className="font-bold">{component.name}</h4>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  {component.usage}
-                </p>
-              </li>
-            ))}
-          </ul>
-
-          <div className="divide-y divide-border border-y border-border">
+          <div className="grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-2">
             <ContentCard
-              variant="row"
-              title={exampleService.name}
-              href={serviceHref(exampleService.slug)}
-              description={exampleService.shortDescription}
-              meta={exampleService.duration}
-              price={exampleService.price}
-              eyebrow={cards.contentCard.rowLabel}
-            />
-          </div>
-
-          <div className="grid max-w-sm grid-cols-1 gap-6">
-            <ContentCard
-              variant="service"
               title={exampleService.name}
               href={serviceHref(exampleService.slug)}
               eyebrow={cards.contentCard.cardLabel}
@@ -87,7 +66,61 @@ export function CardsSection() {
                 },
               ]}
             />
+            <ContentCard
+              title={exampleService.name}
+              meta={exampleService.duration}
+              description={exampleService.shortDescription}
+              price={exampleService.price}
+              metaIcon={<LuClock aria-hidden="true" className="size-3.5" />}
+              actions={[
+                {
+                  label: serviceUi.detailAction,
+                  href: serviceHref(exampleService.slug),
+                },
+              ]}
+            />
           </div>
+
+          <div className="pt-4">
+            <h3 className="text-xl font-semibold">{cards.list.title}</h3>
+            <p className="mt-2 max-w-3xl text-muted-foreground">
+              {cards.list.description}
+            </p>
+          </div>
+          <ul className="space-y-1">
+            <ServiceRow
+              number="01"
+              title={exampleService.name}
+              href={serviceHref(exampleService.slug)}
+              description={exampleService.shortDescription}
+              duration={exampleService.duration}
+              price={exampleService.price}
+            />
+          </ul>
+
+          <aside className="space-y-2 border-t border-border pt-5 text-sm text-muted-foreground">
+            <h3 className="font-semibold text-foreground">
+              {cards.notesTitle}
+            </h3>
+            {cards.notesGroups.map((group) => (
+              <section key={group} aria-label={group}>
+                <h4 className="font-semibold text-foreground">{group}</h4>
+                <ul className="list-inside list-disc">
+                  {cards.components
+                    .filter((component) => component.group === group)
+                    .map((component) => (
+                      <li key={component.name}>
+                        <span className="font-semibold text-foreground">
+                          {component.name}
+                        </span>
+                        {" — "}
+                        {component.usage}
+                      </li>
+                    ))}
+                </ul>
+              </section>
+            ))}
+          </aside>
         </div>
       </Container>
     </Section>

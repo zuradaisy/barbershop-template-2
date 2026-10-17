@@ -3,12 +3,12 @@
 import { useState } from "react";
 
 import { LuClock } from "react-icons/lu";
+import { buttonStyles } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/layouts/section";
 import { ContentCard } from "@/components/ui/content-card";
 import { serviceCategories, serviceUi, services } from "@/content/services";
 import { bookingHref, serviceHref } from "@/lib/links";
-import { cn } from "@/lib/utils";
 
 export function ServicesGrid() {
   const [activeCategory, setActiveCategory] = useState<string>("all");
@@ -22,16 +22,16 @@ export function ServicesGrid() {
     <Section className="py-12 sm:py-16">
       <Container>
         {/* Category Filter Tabs */}
-        <div className="flex flex-wrap items-center gap-1.5 border-b border-border/80 pb-6">
+        <div className="flex flex-wrap items-center gap-2 border-b border-border/80 pb-6">
           <button
             type="button"
             onClick={() => setActiveCategory("all")}
-            className={cn(
-              "rounded-sm px-3.5 py-1.5 text-xs font-bold uppercase transition-colors",
-              activeCategory === "all"
-                ? "bg-primary text-primary-foreground"
-                : "border border-border bg-background text-muted-foreground hover:bg-muted hover:text-foreground",
-            )}
+            aria-pressed={activeCategory === "all"}
+            className={buttonStyles({
+              variant: activeCategory === "all" ? "primary" : "outline",
+              size: "sm",
+              className: "rounded-sm text-sm font-semibold uppercase",
+            })}
           >
             {serviceUi.allServicesLabel} ({services.length})
           </button>
@@ -40,12 +40,12 @@ export function ServicesGrid() {
               key={cat.key}
               type="button"
               onClick={() => setActiveCategory(cat.key)}
-              className={cn(
-                "rounded-sm px-3.5 py-1.5 text-xs font-bold uppercase transition-colors",
-                activeCategory === cat.key
-                  ? "bg-primary text-primary-foreground"
-                  : "border border-border bg-background text-muted-foreground hover:bg-muted hover:text-foreground",
-              )}
+              aria-pressed={activeCategory === cat.key}
+              className={buttonStyles({
+                variant: activeCategory === cat.key ? "primary" : "outline",
+                size: "sm",
+                className: "rounded-sm text-sm font-semibold uppercase",
+              })}
             >
               {cat.label}
             </button>
@@ -57,7 +57,6 @@ export function ServicesGrid() {
           {filteredServices.map((service) => (
             <ContentCard
               key={service.id}
-              variant="service"
               title={service.name}
               href={serviceHref(service.slug)}
               eyebrow={service.categoryLabel}

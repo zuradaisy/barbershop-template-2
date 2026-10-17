@@ -11,7 +11,6 @@ export function TeamList() {
           {teamMembers.map((barber) => (
             <ContentCard
               key={barber.id}
-              variant="profile"
               aspect="portrait"
               title={barber.name}
               eyebrow={barber.role}

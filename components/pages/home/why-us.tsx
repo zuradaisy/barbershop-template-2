@@ -31,7 +31,7 @@ export function WhyUs() {
           </div>
 
           <div className="md:col-span-2 lg:col-span-1">
-            <h3 className="mb-2 text-sm font-bold tracking-wide uppercase">
+            <h3 className="mb-2 text-base font-bold tracking-wide uppercase">
               {whyUs.advantagesTitle}
             </h3>
             <ul className="divide-y divide-border">
@@ -46,7 +46,7 @@ export function WhyUs() {
                       <Icon aria-hidden="true" className="size-4" />
                     </span>
                     <div>
-                      <h4 className="text-xs font-bold tracking-wide uppercase sm:text-sm">
+                      <h4 className="text-base font-bold tracking-wide uppercase">
                         {point.title}
                       </h4>
                       <p className="mt-1 text-base leading-relaxed text-muted-foreground">

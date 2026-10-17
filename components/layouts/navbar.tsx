@@ -35,7 +35,7 @@ export function Navbar() {
             <span className="font-sans text-base font-bold tracking-wider text-foreground uppercase">
               {site.name}
             </span>
-            <span className="text-[10px] font-medium tracking-widest text-muted-foreground uppercase">
+            <span className="text-xs font-medium tracking-widest text-muted-foreground uppercase">
               {site.tagline}
             </span>
           </div>
@@ -57,10 +57,10 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "rounded-md px-3.5 py-2 text-sm font-medium transition-colors",
+                  "px-3.5 py-2 text-base font-medium transition-colors",
                   isActive
-                    ? "bg-muted font-medium text-foreground"
-                    : "text-muted-foreground hover:bg-muted/60 hover:text-foreground",
+                    ? "text-accent"
+                    : "text-muted-foreground hover:text-accent",
                 )}
               >
                 {item.label}
@@ -96,7 +96,7 @@ export function Navbar() {
             aria-label={
               mobileMenuOpen ? site.labels.closeMenu : site.labels.openMenu
             }
-            className="flex size-9 items-center justify-center rounded-md border border-border text-foreground transition-colors hover:bg-muted"
+            className="flex size-9 items-center justify-center rounded-md border border-border text-foreground transition-colors hover:text-accent"
           >
             {mobileMenuOpen ? (
               <LuX className="size-5" />
@@ -126,10 +126,10 @@ export function Navbar() {
                   href={item.href}
                   onClick={closeMenu}
                   className={cn(
-                    "flex items-center justify-between rounded-md px-3 py-2.5 text-base font-medium transition-colors",
+                    "flex items-center justify-between px-3 py-2.5 text-base font-medium transition-colors",
                     isActive
-                      ? "bg-muted font-medium text-foreground"
-                      : "text-muted-foreground hover:bg-muted/50 hover:text-foreground",
+                      ? "text-accent"
+                      : "text-muted-foreground hover:text-accent",
                   )}
                 >
                   <span>{item.label}</span>

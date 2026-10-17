@@ -6,13 +6,13 @@ export type ButtonVariant =
 export type ButtonSize = "sm" | "md" | "lg";
 
 const baseStyles =
-  "inline-flex items-center justify-center gap-2 rounded-md font-semibold transition-colors focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50";
+  "inline-flex cursor-pointer items-center justify-center gap-2 rounded-md font-semibold transition-colors focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50";
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary: "bg-primary text-primary-foreground hover:bg-primary/90",
   secondary: "bg-muted text-foreground hover:bg-muted/80",
   outline: "border border-border bg-background hover:bg-muted",
-  ghost: "hover:bg-muted",
+  ghost: "text-foreground hover:text-accent",
   inverse: "bg-hero-foreground text-hero-scrim hover:bg-hero-foreground/90",
 };
 

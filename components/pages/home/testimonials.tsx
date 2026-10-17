@@ -67,7 +67,7 @@ export function Testimonials() {
               &ldquo;{activeTestimonial.quote}&rdquo;
             </blockquote>
             <div className="mt-5 text-sm text-muted-foreground">
-              <p className="font-semibold text-foreground">
+              <p className="text-base font-semibold text-foreground">
                 {activeTestimonial.name}
               </p>
               <p className="mt-1">{activeTestimonial.role}</p>

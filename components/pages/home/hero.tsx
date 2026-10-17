@@ -29,7 +29,7 @@ export function HomeHero() {
         </p>
 
         <div className="grid grid-cols-1 items-end gap-6 lg:grid-cols-12 lg:gap-10">
-          <h1 className="max-w-5xl font-display text-4xl leading-[0.98] font-bold tracking-tight whitespace-pre-line uppercase sm:text-6xl lg:col-span-8 lg:text-7xl">
+          <h1 className="max-w-5xl font-display text-5xl leading-[0.98] font-bold tracking-tight whitespace-pre-line uppercase sm:text-7xl lg:col-span-8 lg:text-8xl">
             {hero.title}
           </h1>
           <p className="max-w-md text-base leading-relaxed text-hero-foreground/80 lg:col-span-3 lg:col-start-10 lg:pb-2">

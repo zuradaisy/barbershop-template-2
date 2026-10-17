@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { LuArrowRight } from "react-icons/lu";
+import { buttonStyles } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/layouts/section";
-import { ContentCard } from "@/components/ui/content-card";
+import { ServiceRow } from "@/components/ui/service-row";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { home } from "@/content/home";
 import { serviceUi, services } from "@/content/services";
@@ -19,24 +20,28 @@ export function ServicesPreview() {
           kicker={servicesPreview.kicker}
           title={servicesPreview.title}
         />
-        <div className="mt-5 space-y-1">
+        <ul className="mt-5 space-y-1">
           {previewServices.map((service, index) => (
-            <ContentCard
+            <ServiceRow
               key={service.id}
-              variant="row"
               number={String(index + 1).padStart(2, "0")}
               title={service.name}
               href={serviceHref(service.slug)}
               description={service.shortDescription}
-              meta={service.duration}
+              duration={service.duration}
               price={service.price}
-              eyebrow={service.isPopular ? serviceUi.favoriteLabel : undefined}
+              label={service.isPopular ? serviceUi.favoriteLabel : undefined}
             />
           ))}
-        </div>
+        </ul>
         <Link
           href={servicesPreview.viewAllHref}
-          className="mt-5 inline-flex items-center gap-2 text-base font-normal hover:text-accent-text"
+          className={buttonStyles({
+            variant: "ghost",
+            size: "md",
+            className:
+              "mt-5 h-auto gap-2 px-0 py-0 text-base font-normal text-muted-foreground hover:text-accent",
+          })}
         >
           {servicesPreview.viewAllLabel}
           <LuArrowRight aria-hidden="true" className="size-4" />
