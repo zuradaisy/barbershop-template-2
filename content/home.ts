@@ -49,8 +49,8 @@ export const home = {
     accessibleSectionLabel: "Form booking cepat",
     kicker: "Reservasi",
     title: "BOOKING JADWAL",
-    descriptionFor: (serviceName: string) =>
-      `Kirim permintaan booking untuk ${serviceName}. Pilih tanggal dan jam kunjungan yang Anda inginkan.`,
+    description:
+      "Pilih layanan dan waktu kunjungan. Tim kami akan mengonfirmasi jadwal melalui WhatsApp.",
     nameLabel: "Nama Lengkap",
     phoneLabel: "Nomor WhatsApp",
     phoneValidation: "Masukkan nomor WhatsApp yang valid.",
@@ -61,9 +61,8 @@ export const home = {
     submitLabel: "Booking",
     successMessage:
       "WhatsApp terbuka. Permintaan jadwal Anda belum terkonfirmasi sampai barbershop membalas.",
-    pendingNote:
-      "Tanggal dan jam adalah preferensi; jadwal menunggu konfirmasi barbershop.",
     messageIntro: "Halo Crosscut Barber, saya ingin mengajukan booking:",
+    messageOutro: "Jadwal menunggu konfirmasi dari barbershop. Terima kasih.",
   },
   galleryPreview: {
     kicker: "Portfolio & Hasil Potong",
