@@ -12,6 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Select } from "@/components/ui/select";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { home } from "@/content/home";
+import { bookingContent } from "@/content/booking";
 import { services } from "@/content/services";
 import { whatsappLink } from "@/lib/links";
 
@@ -118,13 +119,19 @@ export function QuickBookingForm() {
               />
             </Field>
             <Field id={timeId} label={copy.timeLabel}>
-              <Input
+              <Select
                 id={timeId}
-                type="time"
                 value={time}
                 onChange={(event) => setTime(event.target.value)}
                 required
-              />
+              >
+                <option value="">{copy.timePlaceholder}</option>
+                {bookingContent.timeOptions.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </Select>
             </Field>
             <div className="sm:col-span-2">
               <Button type="submit" size="lg" className="w-full justify-center">

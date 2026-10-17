@@ -57,6 +57,7 @@ export const home = {
     serviceLabel: "Pilih layanan",
     dateLabel: "Tanggal pilihan",
     timeLabel: "Jam pilihan",
+    timePlaceholder: "Pilih jam yang diinginkan",
     timeZoneLabel: "WIB",
     submitLabel: "Booking",
     successMessage:

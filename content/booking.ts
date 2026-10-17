@@ -41,6 +41,7 @@ export const bookingContent = {
     { value: "18:00", label: "18.00 WIB" },
     { value: "19:00", label: "19.00 WIB" },
     { value: "20:00", label: "20.00 WIB" },
+    { value: "21:00", label: "21.00 WIB" },
   ],
   submitLabel: "Booking via WhatsApp",
   summary: {
