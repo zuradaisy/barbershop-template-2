@@ -53,8 +53,7 @@ export function SectionHeading({
           className={buttonStyles({
             variant: "ghost",
             size: "md",
-            className:
-              "group h-auto gap-2 px-0 py-0 text-base font-normal text-muted-foreground hover:text-accent",
+            className: "group h-auto gap-2 px-0 py-0 text-base font-normal",
           })}
         >
           <span>{actionLink.label}</span>

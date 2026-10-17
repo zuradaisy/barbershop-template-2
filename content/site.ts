@@ -50,7 +50,7 @@ export const site = {
     walkInNote:
       "Walk-in diterima sesuai ketersediaan kursi. Disarankan reservasi jadwal terlebih dahulu.",
     copyright: "Seluruh hak cipta dilindungi.",
-    signature: "Dibuat dengan dedikasi di Jakarta Selatan.",
+    signature: "Dibuat di Jakarta Selatan.",
   },
   skipLinkLabel: "Lompat ke konten utama",
   theme: {
@@ -72,7 +72,7 @@ export const site = {
     hours: {
       weekday: "09.00 – 21.00 WIB",
       weekend: "09.00 – 21.00 WIB",
-      display: "Setiap hari, 09.00 – 21.00 WIB",
+      display: "Buka Setiap hari, 09.00 – 21.00 WIB",
     },
     googleMapsUrl: "https://maps.google.com/?q=Senopati+Jakarta+Selatan",
     coordinates: {

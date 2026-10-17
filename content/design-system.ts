@@ -290,7 +290,7 @@ export const designSystem = {
     description:
       "Section dan Container mengatur ritme serta lebar halaman. SectionHeading memakai label kecil dan judul yang konsisten; deskripsi tersedia untuk halaman yang memerlukannya.",
     tokens: [
-      { name: "Section", usage: "py-20 lg:py-24 (80px / 96px)" },
+      { name: "Section", usage: "py-16 lg:py-20 (64px / 80px)" },
       {
         name: "Container",
         usage: "max-w-6xl · 2xl:max-w-7xl · px-4 sm:px-6 lg:px-8",

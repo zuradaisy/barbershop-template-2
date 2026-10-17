@@ -12,7 +12,7 @@ const variantStyles: Record<ButtonVariant, string> = {
   primary: "bg-primary text-primary-foreground hover:bg-primary/90",
   secondary: "bg-muted text-foreground hover:bg-muted/80",
   outline: "border border-border bg-background hover:bg-muted",
-  ghost: "text-foreground hover:text-accent",
+  ghost: "text-muted-foreground hover:text-foreground",
   inverse: "bg-hero-foreground text-hero-scrim hover:bg-hero-foreground/90",
 };
 
