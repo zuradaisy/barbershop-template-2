@@ -41,7 +41,7 @@ export const services: Service[] = [
     priceNumber: 50000,
     duration: "45 Menit",
     durationMinutes: 45,
-    image: "/images/service-haircut.jpg",
+    image: "/images/layanan1.jpg",
     steps: [
       "Konsultasi gaya rambut & analisis pola tumbuh rambut",
       "Pemotongan presisi (scissors work & fade clipper blending)",
@@ -72,7 +72,7 @@ export const services: Service[] = [
     priceNumber: 30000,
     duration: "25 Menit",
     durationMinutes: 25,
-    image: "/images/service-beard.jpg",
+    image: "/images/layanan2.avif",
     steps: [
       "Analisis pola pertumbuhan janggut dan kontur rahang",
       "Trimming ketebalan dan meratakan gradasi janggut",
@@ -102,7 +102,7 @@ export const services: Service[] = [
     priceNumber: 35000,
     duration: "30 Menit",
     durationMinutes: 30,
-    image: "/images/service-side.jpg",
+    image: "/images/layanan3.avif",
     steps: [
       "Pembersihan wajah dan persiapan pre-shave oil",
       "Kompres handuk hangat pertama untuk melunakkan bulu",
@@ -133,7 +133,7 @@ export const services: Service[] = [
     priceNumber: 120000,
     duration: "75 Menit",
     durationMinutes: 75,
-    image: "/images/gallery-fade.jpg",
+    image: "/images/layanan4.jpg",
     steps: [
       "Sesi konsultasi gaya & potong rambut premium",
       "Trimming atau straight razor shaving janggut/kumis",
@@ -165,7 +165,7 @@ export const services: Service[] = [
     priceNumber: 95000,
     duration: "60 Menit",
     durationMinutes: 60,
-    image: "/images/service-royal.jpg",
+    image: "/images/layanan5.jpg",
     steps: [
       "Konsultasi warna dan tes sensitivitas kulit",
       "Aplikasi bleaching bertahap (jika diperlukan)",
@@ -196,7 +196,7 @@ export const services: Service[] = [
     priceNumber: 75000,
     duration: "45 Menit",
     durationMinutes: 45,
-    image: "/images/gallery-crop.jpg",
+    image: "/images/layanan6.avif",
     steps: [
       "Pemeriksaan kondisi kulit kepala",
       "Eksfoliasi scalp scrub pembersih kotoran",
@@ -227,7 +227,7 @@ export const services: Service[] = [
     priceNumber: 40000,
     duration: "35 Menit",
     durationMinutes: 35,
-    image: "/images/gallery-beard.jpg",
+    image: "/images/layanan7.avif",
     steps: [
       "Pendekatan ramah agar anak merasa nyaman di kursi potong",
       "Konsultasi model rambut bersama orang tua",
@@ -257,8 +257,6 @@ export const serviceUi = {
   reservationTitle: "Ajukan layanan ini",
   reservationDescription:
     "Pilih tanggal dan jam pilihan. Permintaan menunggu konfirmasi barbershop.",
-  confirmationNote:
-    "Permintaan jadwal belum terkonfirmasi sampai Anda mendapat balasan dari barbershop.",
   serviceLabel: "Layanan",
   priceLabel: "Harga",
   detailAction: "Lihat detail",

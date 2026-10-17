@@ -33,7 +33,7 @@ export const beforeAfterItems: BeforeAfterItem[] = [
     title: "Mid Fade",
     categories: ["fade", "crop"],
     beforeImage: "/images/before1.avif",
-    afterImage: "/images/after 1.avif",
+    afterImage: "/images/after1.avif",
   },
   {
     id: "ba-beard-sculpt",

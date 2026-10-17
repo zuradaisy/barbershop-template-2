@@ -11,7 +11,7 @@ import { WhyUs } from "@/components/pages/home/why-us";
 import { site } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: `Beranda — ${site.tagline}`,
+  title: `Crosscut — ${site.tagline}`,
   description: site.description,
 };
 

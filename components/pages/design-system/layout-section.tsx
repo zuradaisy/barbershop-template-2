@@ -16,7 +16,7 @@ export function LayoutSection() {
               key={token.name}
               className="rounded-lg border border-dashed border-border p-4"
             >
-              <p className="font-mono text-sm font-medium">{token.name}</p>
+              <p className="font-mono text-sm font-semibold">{token.name}</p>
               <p className="mt-1 text-sm text-muted-foreground">
                 {token.usage}
               </p>

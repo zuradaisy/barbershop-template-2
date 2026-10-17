@@ -17,7 +17,7 @@ export function ButtonsSection() {
         />
         <div className="mt-8 space-y-10">
           <div>
-            <h3 className="text-sm font-medium text-muted-foreground">
+            <h3 className="text-sm font-semibold text-muted-foreground">
               Varian
             </h3>
             <ul className="mt-4 space-y-4">
@@ -33,7 +33,7 @@ export function ButtonsSection() {
             </ul>
           </div>
           <div>
-            <h3 className="text-sm font-medium text-muted-foreground">
+            <h3 className="text-sm font-semibold text-muted-foreground">
               Ukuran
             </h3>
             <ul className="mt-4 space-y-4">
@@ -49,7 +49,7 @@ export function ButtonsSection() {
             </ul>
           </div>
           <div>
-            <h3 className="text-sm font-medium text-muted-foreground">
+            <h3 className="text-sm font-semibold text-muted-foreground">
               Tautan bergaya tombol
             </h3>
             <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">

@@ -12,7 +12,7 @@ export function MotionSection() {
         <SectionHeading title={motion.title} description={motion.description} />
         <div className="mt-8 space-y-10">
           <div>
-            <h3 className="text-sm font-medium text-muted-foreground">
+            <h3 className="text-sm font-semibold text-muted-foreground">
               Durasi
             </h3>
             <ul className="mt-4 grid gap-4 sm:grid-cols-3">
@@ -21,7 +21,7 @@ export function MotionSection() {
                   key={item.name}
                   className="rounded-lg border border-border p-4"
                 >
-                  <p className="font-mono text-sm font-medium">{item.name}</p>
+                  <p className="font-mono text-sm font-semibold">{item.name}</p>
                   <p className="mt-1 text-sm text-muted-foreground">
                     {item.usage}
                   </p>
@@ -30,11 +30,11 @@ export function MotionSection() {
             </ul>
           </div>
           <div>
-            <h3 className="text-sm font-medium text-muted-foreground">
+            <h3 className="text-sm font-semibold text-muted-foreground">
               Easing
             </h3>
             <div className="mt-4 rounded-lg border border-border p-6">
-              <p className="font-mono text-sm font-medium">
+              <p className="font-mono text-sm font-semibold">
                 {motion.easing.name}
               </p>
               <p className="mt-1 text-sm text-muted-foreground">

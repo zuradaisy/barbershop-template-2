@@ -13,11 +13,13 @@ export function TypographySection() {
         />
         <ul className="mt-8 space-y-10">
           <li>
-            <h3 className="text-sm font-medium text-muted-foreground">
+            <h3 className="text-sm font-semibold text-muted-foreground">
               {designSystem.font.title}
             </h3>
             <div className="mt-4 rounded-lg border border-border p-6">
-              <p className="text-2xl font-medium">{designSystem.font.sample}</p>
+              <p className="text-2xl font-semibold">
+                {designSystem.font.sample}
+              </p>
               <p className="mt-3 font-mono text-xs text-muted-foreground">
                 {designSystem.font.current}
               </p>
@@ -27,7 +29,7 @@ export function TypographySection() {
             </p>
           </li>
           <li>
-            <h3 className="text-sm font-medium text-muted-foreground">
+            <h3 className="text-sm font-semibold text-muted-foreground">
               {designSystem.typography.scaleTitle}
             </h3>
             <ul className="mt-4 divide-y divide-border overflow-hidden rounded-lg border border-border">
@@ -38,7 +40,9 @@ export function TypographySection() {
                 >
                   <p className={item.className}>{item.sample}</p>
                   <div className="sm:text-right">
-                    <p className="font-mono text-xs font-medium">{item.name}</p>
+                    <p className="font-mono text-xs font-semibold">
+                      {item.name}
+                    </p>
                     <p className="mt-1 text-xs text-muted-foreground">
                       {item.usage}
                     </p>

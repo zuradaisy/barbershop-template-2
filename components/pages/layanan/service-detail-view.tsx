@@ -55,7 +55,7 @@ export function ServiceDetailView({ service }: { service: Service }) {
                 {service.name}
               </h1>
               <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 border-b border-border pb-6">
-                <span className="text-2xl font-extrabold">{service.price}</span>
+                <span className="text-2xl font-bold">{service.price}</span>
                 <span className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
                   <LuClock aria-hidden="true" className="size-4 text-accent" />
                   {service.duration}
@@ -204,13 +204,6 @@ export function ServiceDetailView({ service }: { service: Service }) {
                   );
                 })}
               </ul>
-              <p className="flex items-start gap-2 px-1 text-base leading-relaxed text-muted-foreground">
-                <LuShieldCheck
-                  aria-hidden="true"
-                  className="mt-0.5 size-4 shrink-0"
-                />
-                {serviceUi.confirmationNote}
-              </p>
             </div>
           </aside>
         </div>

@@ -24,7 +24,9 @@ export function RadiusSection() {
                   token.className,
                 )}
               />
-              <p className="mt-3 font-mono text-sm font-medium">{token.name}</p>
+              <p className="mt-3 font-mono text-sm font-semibold">
+                {token.name}
+              </p>
               <p className="mt-1 text-sm text-muted-foreground">
                 {token.usage}
               </p>

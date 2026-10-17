@@ -30,7 +30,7 @@ export function IconsSection() {
         <SectionHeading title={icons.title} description={icons.description} />
         <div className="mt-8 space-y-10">
           <div>
-            <h3 className="text-sm font-medium text-muted-foreground">
+            <h3 className="text-sm font-semibold text-muted-foreground">
               Ukuran
             </h3>
             <ul className="mt-4 flex flex-wrap items-center gap-x-8 gap-y-4">
@@ -38,7 +38,9 @@ export function IconsSection() {
                 <li key={item.size} className="flex items-center gap-3">
                   <LuCheck className={item.size} aria-hidden />
                   <div>
-                    <p className="font-mono text-xs font-medium">{item.size}</p>
+                    <p className="font-mono text-xs font-semibold">
+                      {item.size}
+                    </p>
                     <p className="text-xs text-muted-foreground">
                       {item.usage}
                     </p>
@@ -48,7 +50,7 @@ export function IconsSection() {
             </ul>
           </div>
           <div>
-            <h3 className="text-sm font-medium text-muted-foreground">
+            <h3 className="text-sm font-semibold text-muted-foreground">
               Paket dan contoh
             </h3>
             <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -63,7 +65,9 @@ export function IconsSection() {
                     <p className="mt-3 font-mono text-xs text-muted-foreground">
                       {item.pack}
                     </p>
-                    <p className="font-mono text-sm font-medium">{item.name}</p>
+                    <p className="font-mono text-sm font-semibold">
+                      {item.name}
+                    </p>
                     <p className="mt-1 text-sm text-muted-foreground">
                       {item.usage}
                     </p>

@@ -7,7 +7,7 @@ export function DesignSystemHero() {
     <Section>
       <Container>
         <div className="max-w-2xl">
-          <p className="text-sm font-medium text-muted-foreground">
+          <p className="text-sm font-semibold text-muted-foreground">
             {designSystem.hero.eyebrow}
           </p>
           <h1 className="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl">

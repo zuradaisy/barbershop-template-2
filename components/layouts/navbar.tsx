@@ -35,7 +35,7 @@ export function Navbar() {
             <span className="font-sans text-base font-bold tracking-wider text-foreground uppercase">
               {site.name}
             </span>
-            <span className="text-xs font-medium tracking-widest text-muted-foreground uppercase">
+            <span className="text-xs font-semibold tracking-widest text-muted-foreground uppercase">
               {site.tagline}
             </span>
           </div>
@@ -57,7 +57,7 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "px-3.5 py-2 text-base font-medium transition-colors",
+                  "px-3.5 py-2 text-base font-semibold transition-colors",
                   isActive
                     ? "text-accent"
                     : "text-muted-foreground hover:text-accent",
@@ -126,7 +126,7 @@ export function Navbar() {
                   href={item.href}
                   onClick={closeMenu}
                   className={cn(
-                    "flex items-center justify-between px-3 py-2.5 text-base font-medium transition-colors",
+                    "flex items-center justify-between px-3 py-2.5 text-base font-semibold transition-colors",
                     isActive
                       ? "text-accent"
                       : "text-muted-foreground hover:text-accent",
@@ -141,7 +141,7 @@ export function Navbar() {
           <div className="mt-4 flex flex-col gap-3 border-t border-border/80 pt-4">
             <div className="text-sm text-muted-foreground">
               {site.contact.hours.display ? (
-                <p className="font-medium text-foreground">
+                <p className="font-semibold text-foreground">
                   {site.contact.hours.display}
                 </p>
               ) : null}

@@ -39,8 +39,7 @@ export function ServicesPreview() {
           className={buttonStyles({
             variant: "ghost",
             size: "md",
-            className:
-              "mt-5 h-auto gap-2 px-0 py-0 text-base font-normal text-muted-foreground hover:text-accent",
+            className: "mt-5 h-auto gap-2 px-0 py-0 text-base font-normal",
           })}
         >
           {servicesPreview.viewAllLabel}

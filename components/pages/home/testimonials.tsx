@@ -62,7 +62,7 @@ export function Testimonials() {
             ) : null}
             <blockquote
               key={activeTestimonial.id}
-              className="mx-auto max-w-3xl text-base leading-relaxed font-medium text-foreground sm:text-lg lg:text-xl"
+              className="mx-auto max-w-3xl text-base leading-relaxed font-semibold text-foreground sm:text-lg lg:text-xl"
             >
               &ldquo;{activeTestimonial.quote}&rdquo;
             </blockquote>
